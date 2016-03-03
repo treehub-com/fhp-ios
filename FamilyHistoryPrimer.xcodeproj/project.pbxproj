@@ -14,6 +14,9 @@
 		5247F4F91C88AA6C00A27649 /* FamilyHistoryPrimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F4F81C88AA6C00A27649 /* FamilyHistoryPrimerTests.swift */; };
 		5247F5061C88AB8700A27649 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5051C88AB8700A27649 /* CategoryViewController.swift */; };
 		5247F5091C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5081C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift */; };
+		5247F50B1C88E74400A27649 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5247F50A1C88E74400A27649 /* SwiftyJSON.framework */; };
+		5247F50E1C88E7B700A27649 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F50D1C88E7B700A27649 /* Category.swift */; };
+		5247F5101C88E8ED00A27649 /* learn.json in Resources */ = {isa = PBXBuildFile; fileRef = 5247F50F1C88E8ED00A27649 /* learn.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		5247F4FA1C88AA6C00A27649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5247F5051C88AB8700A27649 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		5247F5081C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticallyCenterUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		5247F50A1C88E74400A27649 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		5247F50D1C88E7B700A27649 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		5247F50F1C88E8ED00A27649 /* learn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = learn.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5247F50B1C88E74400A27649 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +68,8 @@
 		5247F4D71C88AA6C00A27649 = {
 			isa = PBXGroup;
 			children = (
+				5247F50F1C88E8ED00A27649 /* learn.json */,
+				5247F50A1C88E74400A27649 /* SwiftyJSON.framework */,
 				5247F4E21C88AA6C00A27649 /* FamilyHistoryPrimer */,
 				5247F4F71C88AA6C00A27649 /* FamilyHistoryPrimerTests */,
 				5247F4E11C88AA6C00A27649 /* Products */,
@@ -103,6 +112,7 @@
 		5247F5031C88AB2E00A27649 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5247F50D1C88E7B700A27649 /* Category.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -133,6 +143,7 @@
 				5247F4DC1C88AA6C00A27649 /* Sources */,
 				5247F4DD1C88AA6C00A27649 /* Frameworks */,
 				5247F4DE1C88AA6C00A27649 /* Resources */,
+				5247F50C1C88E75300A27649 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -204,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5247F5101C88E8ED00A27649 /* learn.json in Resources */,
 				5247F4EE1C88AA6C00A27649 /* LaunchScreen.storyboard in Resources */,
 				5247F4EB1C88AA6C00A27649 /* Assets.xcassets in Resources */,
 				5247F4E91C88AA6C00A27649 /* Main.storyboard in Resources */,
@@ -219,6 +231,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5247F50C1C88E75300A27649 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5247F4DC1C88AA6C00A27649 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -227,6 +256,7 @@
 				5247F5061C88AB8700A27649 /* CategoryViewController.swift in Sources */,
 				5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */,
 				5247F5091C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift in Sources */,
+				5247F50E1C88E7B700A27649 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +385,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FamilyHistoryPrimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -367,6 +401,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FamilyHistoryPrimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -6,15 +6,20 @@
 //  Copyright © 2016 Treehub. All rights reserved.
 //
 
+import SwiftyJSON
 import UIKit
 
 class CategoryViewController: UIViewController {
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
 
+    var categories: [Category] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadCategories()
+        
         navItem.title = "Family History: A Primer"
         
         categoryCollectionView.dataSource = self
@@ -31,6 +36,17 @@ class CategoryViewController: UIViewController {
         insets.bottom = value
         self.categoryCollectionView.contentInset = insets
     }
+    
+    func loadCategories() {
+        let path = NSBundle.mainBundle().pathForResource("learn", ofType: "json")
+        let jsonData = NSData(contentsOfFile:path!)
+        let json = JSON(data: jsonData!)
+        let jsonCategories: Array<JSON> = json["categories"].arrayValue
+        
+        for category:JSON in jsonCategories {
+            categories.append(Category(category: category))
+        }
+    }
 }
 
 extension CategoryViewController: UICollectionViewDataSource {
@@ -40,7 +56,7 @@ extension CategoryViewController: UICollectionViewDataSource {
     
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return categories.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
