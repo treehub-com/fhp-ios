@@ -21,8 +21,6 @@ class CategoryViewController: UIViewController {
         loadCategories()
         
         navItem.title = "Family History: A Primer"
-        
-        categoryCollectionView.dataSource = self
     }
     
     // Set insets appropriately
@@ -60,11 +58,23 @@ extension CategoryViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("categoryCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("categoryCell", forIndexPath: indexPath) as! CategoryCell
 
+        cell.category = categories[indexPath.item]
+        
+        // TODO set the offset
+        
         cell.backgroundColor = UIColor.blueColor()
         
         return cell
         
+    }
+}
+
+extension CategoryViewController: UICollectionViewDelegateFlowLayout {
+    
+    // Make each cell the size of the view area
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(collectionView.bounds.width, (collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height)
     }
 }
