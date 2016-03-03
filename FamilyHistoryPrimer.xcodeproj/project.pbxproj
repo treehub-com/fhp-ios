@@ -13,12 +13,13 @@
 		5247F4EE1C88AA6C00A27649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247F4EC1C88AA6C00A27649 /* LaunchScreen.storyboard */; };
 		5247F4F91C88AA6C00A27649 /* FamilyHistoryPrimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F4F81C88AA6C00A27649 /* FamilyHistoryPrimerTests.swift */; };
 		5247F5061C88AB8700A27649 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5051C88AB8700A27649 /* CategoryViewController.swift */; };
-		5247F5091C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5081C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift */; };
+		5247F5091C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5081C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift */; };
 		5247F50B1C88E74400A27649 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5247F50A1C88E74400A27649 /* SwiftyJSON.framework */; };
 		5247F50E1C88E7B700A27649 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F50D1C88E7B700A27649 /* Category.swift */; };
 		5247F5101C88E8ED00A27649 /* learn.json in Resources */ = {isa = PBXBuildFile; fileRef = 5247F50F1C88E8ED00A27649 /* learn.json */; };
 		5247F5121C88EA1400A27649 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5111C88EA1400A27649 /* Module.swift */; };
 		5247F5141C88EC1C00A27649 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5131C88EC1C00A27649 /* CategoryCell.swift */; };
+		5247F5161C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5151C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +43,13 @@
 		5247F4F81C88AA6C00A27649 /* FamilyHistoryPrimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyHistoryPrimerTests.swift; sourceTree = "<group>"; };
 		5247F4FA1C88AA6C00A27649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5247F5051C88AB8700A27649 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		5247F5081C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticallyCenterUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		5247F5081C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		5247F50A1C88E74400A27649 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		5247F50D1C88E7B700A27649 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5247F50F1C88E8ED00A27649 /* learn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = learn.json; sourceTree = "<group>"; };
 		5247F5111C88EA1400A27649 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		5247F5131C88EC1C00A27649 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		5247F5151C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,8 @@
 		5247F5071C88B8E600A27649 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				5247F5081C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift */,
+				5247F5081C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift */,
+				5247F5151C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -260,8 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5247F5061C88AB8700A27649 /* CategoryViewController.swift in Sources */,
+				5247F5161C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift in Sources */,
 				5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */,
-				5247F5091C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift in Sources */,
+				5247F5091C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift in Sources */,
 				5247F5121C88EA1400A27649 /* Module.swift in Sources */,
 				5247F50E1C88E7B700A27649 /* Category.swift in Sources */,
 				5247F5141C88EC1C00A27649 /* CategoryCell.swift in Sources */,

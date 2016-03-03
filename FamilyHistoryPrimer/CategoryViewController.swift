@@ -27,12 +27,13 @@ class CategoryViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        // Set CategoryCollectionView top and bottom insets
+        // Set categoryCollectionView top and bottom insets
         var insets = self.categoryCollectionView.contentInset
         let value = (self.categoryCollectionView.frame.height - (self.categoryCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height) * 0.5
         insets.top = value
         insets.bottom = value
         self.categoryCollectionView.contentInset = insets
+
     }
     
     func loadCategories() {
@@ -62,7 +63,14 @@ extension CategoryViewController: UICollectionViewDataSource {
 
         cell.category = categories[indexPath.item]
         
-        // TODO set the offset
+        // Set moduleCollectionView top and bottom insets
+        var insets = cell.moduleCollectionView.contentInset
+        let value = (self.categoryCollectionView.frame.width - (cell.moduleCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
+        insets.left = value
+        insets.right = value
+        cell.moduleCollectionView.contentInset = insets
+        
+        // TODO set the offset of each row
         
         cell.backgroundColor = UIColor.blueColor()
         
