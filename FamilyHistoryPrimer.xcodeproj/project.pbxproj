@@ -13,6 +13,7 @@
 		5247F4EE1C88AA6C00A27649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247F4EC1C88AA6C00A27649 /* LaunchScreen.storyboard */; };
 		5247F4F91C88AA6C00A27649 /* FamilyHistoryPrimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F4F81C88AA6C00A27649 /* FamilyHistoryPrimerTests.swift */; };
 		5247F5061C88AB8700A27649 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5051C88AB8700A27649 /* CategoryViewController.swift */; };
+		5247F5091C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5081C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		5247F4F81C88AA6C00A27649 /* FamilyHistoryPrimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyHistoryPrimerTests.swift; sourceTree = "<group>"; };
 		5247F4FA1C88AA6C00A27649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5247F5051C88AB8700A27649 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		5247F5081C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticallyCenterUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		5247F4E21C88AA6C00A27649 /* FamilyHistoryPrimer */ = {
 			isa = PBXGroup;
 			children = (
+				5247F5071C88B8E600A27649 /* Util */,
 				5247F5041C88AB3A00A27649 /* CategoryPage */,
 				5247F5031C88AB2E00A27649 /* Models */,
 				5247F4E31C88AA6C00A27649 /* AppDelegate.swift */,
@@ -110,6 +113,14 @@
 				5247F5051C88AB8700A27649 /* CategoryViewController.swift */,
 			);
 			name = CategoryPage;
+			sourceTree = "<group>";
+		};
+		5247F5071C88B8E600A27649 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5247F5081C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			files = (
 				5247F5061C88AB8700A27649 /* CategoryViewController.swift in Sources */,
 				5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */,
+				5247F5091C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
