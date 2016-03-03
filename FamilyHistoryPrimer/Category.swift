@@ -11,8 +11,16 @@ import SwiftyJSON
 class Category {
     
     var title: String
+    var modules: [Module] = []
     
     init(category: JSON) {
         self.title = category["title"].stringValue
+        
+        let jsonModules: Array<JSON> = category["modules"].arrayValue
+        
+        for module:JSON in jsonModules {
+            modules.append(Module(module: module))
+        }
+        
     }
 }

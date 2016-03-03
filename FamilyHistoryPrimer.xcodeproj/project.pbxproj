@@ -17,6 +17,7 @@
 		5247F50B1C88E74400A27649 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5247F50A1C88E74400A27649 /* SwiftyJSON.framework */; };
 		5247F50E1C88E7B700A27649 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F50D1C88E7B700A27649 /* Category.swift */; };
 		5247F5101C88E8ED00A27649 /* learn.json in Resources */ = {isa = PBXBuildFile; fileRef = 5247F50F1C88E8ED00A27649 /* learn.json */; };
+		5247F5121C88EA1400A27649 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5111C88EA1400A27649 /* Module.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		5247F50A1C88E74400A27649 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		5247F50D1C88E7B700A27649 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5247F50F1C88E8ED00A27649 /* learn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = learn.json; sourceTree = "<group>"; };
+		5247F5111C88EA1400A27649 /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				5247F50D1C88E7B700A27649 /* Category.swift */,
+				5247F5111C88EA1400A27649 /* Module.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				5247F5061C88AB8700A27649 /* CategoryViewController.swift in Sources */,
 				5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */,
 				5247F5091C88B93100A27649 /* VerticallyCenterUICollectionViewFlowLayout.swift in Sources */,
+				5247F5121C88EA1400A27649 /* Module.swift in Sources */,
 				5247F50E1C88E7B700A27649 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
