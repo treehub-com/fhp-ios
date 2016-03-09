@@ -29,9 +29,9 @@ class CategoryViewController: UIViewController {
         
         // Set categoryCollectionView top and bottom insets
         var insets = self.categoryCollectionView.contentInset
-        let value = (self.categoryCollectionView.frame.height - (self.categoryCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height) * 0.5
-        insets.top = value
-        insets.bottom = value
+        let value = (self.categoryCollectionView.frame.width - (self.categoryCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
+        insets.left = value
+        insets.right = value
         self.categoryCollectionView.contentInset = insets
 
     }
@@ -71,9 +71,9 @@ extension CategoryViewController: UICollectionViewDataSource {
         
         // Set moduleCollectionView top and bottom insets
         var insets = cell.moduleCollectionView.contentInset
-        let value = (self.categoryCollectionView.frame.width - (cell.moduleCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
-        insets.left = value
-        insets.right = value
+        let value = (self.categoryCollectionView.frame.height - (cell.moduleCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height) * 0.5
+        insets.top = value
+        insets.bottom = value
         cell.moduleCollectionView.contentInset = insets
         
         // TODO set the offset of each row
@@ -87,6 +87,7 @@ extension CategoryViewController: UICollectionViewDelegateFlowLayout {
     
     // Make each cell the size of the view area
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(collectionView.bounds.width, (collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height)
+        return CGSizeMake((collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width, collectionView.bounds.height)
+        //return CGSizeMake(collectionView.bounds.width, (collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height)
     }
 }
