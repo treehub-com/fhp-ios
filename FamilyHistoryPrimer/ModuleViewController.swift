@@ -49,7 +49,10 @@ extension ModuleViewController : UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("lessonCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("lessonCell", forIndexPath: indexPath) as! LessonCell
+        
+        cell.lessonCard.lesson = module.lessons[indexPath.item]
+        cell.lessonCard.layout()
         
         return cell
     }
