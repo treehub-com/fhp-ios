@@ -61,6 +61,7 @@
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <connections>
                                                                 <outlet property="moduleCard" destination="qbp-iN-qGU" id="3Xb-gC-9sl"/>
+                                                                <segue destination="ndR-uv-13R" kind="show" identifier="showModulePage" id="iS6-7O-2ud"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -97,7 +98,9 @@
                             <constraint firstAttribute="trailing" secondItem="OM0-hN-0Du" secondAttribute="trailing" id="sLP-nF-9sc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Category Page" id="IcY-kF-Q5v"/>
+                    <navigationItem key="navigationItem" title="Category Page" id="IcY-kF-Q5v">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="dMB-I1-iCi"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="categoryCollectionView" destination="OM0-hN-0Du" id="Dcv-ya-2Le"/>
                         <outlet property="navItem" destination="IcY-kF-Q5v" id="hRV-hW-4FN"/>
@@ -106,6 +109,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6YY-sB-KUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1185" y="475"/>
+        </scene>
+        <!--Module Page-->
+        <scene sceneID="BW4-4e-q5Y">
+            <objects>
+                <viewController title="Module Page" id="ndR-uv-13R" customClass="ModuleViewController" customModule="FamilyHistoryPrimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1xR-UJ-SOk"/>
+                        <viewControllerLayoutGuide type="bottom" id="JpJ-gU-8W9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I1S-Nc-ths">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WUu-62-kL4">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qW4-LU-cAb" customClass="HorizontalUICollectionViewFlowLayout" customModule="FamilyHistoryPrimer" customModuleProvider="target">
+                                    <size key="itemSize" width="300" height="400"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="lessonCell" id="LHW-fx-vCv">
+                                        <rect key="frame" x="0.0" y="100" width="300" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ndR-uv-13R" id="ex3-06-hxv"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WUu-62-kL4" secondAttribute="trailing" id="MpO-ej-KGO"/>
+                            <constraint firstItem="WUu-62-kL4" firstAttribute="leading" secondItem="I1S-Nc-ths" secondAttribute="leading" id="Re4-K4-BbH"/>
+                            <constraint firstItem="JpJ-gU-8W9" firstAttribute="top" secondItem="WUu-62-kL4" secondAttribute="bottom" id="Ygs-Ib-mk9"/>
+                            <constraint firstItem="WUu-62-kL4" firstAttribute="top" secondItem="1xR-UJ-SOk" secondAttribute="bottom" id="vsm-Bd-6UW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Module Page" id="L7b-Y2-uY4">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Rid-wS-LDG"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lessonCollectionView" destination="WUu-62-kL4" id="fFV-z8-RGZ"/>
+                        <outlet property="navItem" destination="L7b-Y2-uY4" id="h6k-Ej-qje"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="skQ-9j-sfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="475"/>
         </scene>
         <!--Nav-->
         <scene sceneID="Ksk-py-OKk">

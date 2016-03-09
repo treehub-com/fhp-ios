@@ -36,6 +36,12 @@ class CategoryViewController: UIViewController {
 
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let moduleCell = sender as! ModuleCell
+        let moduleView = segue.destinationViewController as! ModuleViewController
+        moduleView.module = moduleCell.moduleCard.module
+    }
+    
     func loadCategories() {
         let path = NSBundle.mainBundle().pathForResource("learn", ofType: "json")
         let jsonData = NSData(contentsOfFile:path!)
