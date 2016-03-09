@@ -13,6 +13,10 @@
 		52258B341C908BE0008E04F5 /* LessonCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52258B331C908BE0008E04F5 /* LessonCard.xib */; };
 		52258B361C908C0A008E04F5 /* LessonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B351C908C0A008E04F5 /* LessonCardView.swift */; };
 		52258B381C908D41008E04F5 /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B371C908D41008E04F5 /* LessonCell.swift */; };
+		52258B3A1C909D7C008E04F5 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B391C909D7C008E04F5 /* Section.swift */; };
+		52258B3C1C909DBE008E04F5 /* TextSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B3B1C909DBE008E04F5 /* TextSection.swift */; };
+		52258B3E1C909EB1008E04F5 /* YesNoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B3D1C909EB1008E04F5 /* YesNoSection.swift */; };
+		52258B401C909F0E008E04F5 /* ChallengeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B3F1C909F0E008E04F5 /* ChallengeSection.swift */; };
 		5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F4E31C88AA6C00A27649 /* AppDelegate.swift */; };
 		5247F4E91C88AA6C00A27649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247F4E71C88AA6C00A27649 /* Main.storyboard */; };
 		5247F4EB1C88AA6C00A27649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5247F4EA1C88AA6C00A27649 /* Assets.xcassets */; };
@@ -47,6 +51,10 @@
 		52258B331C908BE0008E04F5 /* LessonCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LessonCard.xib; sourceTree = "<group>"; };
 		52258B351C908C0A008E04F5 /* LessonCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonCardView.swift; sourceTree = "<group>"; };
 		52258B371C908D41008E04F5 /* LessonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
+		52258B391C909D7C008E04F5 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		52258B3B1C909DBE008E04F5 /* TextSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSection.swift; sourceTree = "<group>"; };
+		52258B3D1C909EB1008E04F5 /* YesNoSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoSection.swift; sourceTree = "<group>"; };
+		52258B3F1C909F0E008E04F5 /* ChallengeSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeSection.swift; sourceTree = "<group>"; };
 		5247F4E01C88AA6C00A27649 /* FamilyHistoryPrimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyHistoryPrimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5247F4E31C88AA6C00A27649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5247F4E81C88AA6C00A27649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +156,10 @@
 				5247F50D1C88E7B700A27649 /* Category.swift */,
 				5247F5111C88EA1400A27649 /* Module.swift */,
 				52258B2E1C907C45008E04F5 /* Lesson.swift */,
+				52258B391C909D7C008E04F5 /* Section.swift */,
+				52258B3B1C909DBE008E04F5 /* TextSection.swift */,
+				52258B3D1C909EB1008E04F5 /* YesNoSection.swift */,
+				52258B3F1C909F0E008E04F5 /* ChallengeSection.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -304,9 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52258B3E1C909EB1008E04F5 /* YesNoSection.swift in Sources */,
 				52258B321C9080C7008E04F5 /* ModuleViewController.swift in Sources */,
 				5247F5061C88AB8700A27649 /* CategoryViewController.swift in Sources */,
+				52258B401C909F0E008E04F5 /* ChallengeSection.swift in Sources */,
 				52258B2D1C907873008E04F5 /* ModuleCell.swift in Sources */,
+				52258B3A1C909D7C008E04F5 /* Section.swift in Sources */,
 				5247F5161C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift in Sources */,
 				52258B361C908C0A008E04F5 /* LessonCardView.swift in Sources */,
 				5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */,
@@ -315,6 +330,7 @@
 				5247F5091C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift in Sources */,
 				52258B381C908D41008E04F5 /* LessonCell.swift in Sources */,
 				5247F5121C88EA1400A27649 /* Module.swift in Sources */,
+				52258B3C1C909DBE008E04F5 /* TextSection.swift in Sources */,
 				5247F50E1C88E7B700A27649 /* Category.swift in Sources */,
 				5247F5141C88EC1C00A27649 /* CategoryCell.swift in Sources */,
 			);

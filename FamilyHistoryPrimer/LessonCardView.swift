@@ -11,6 +11,7 @@ import UIKit
 class LessonCardView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var lessonTitleLabel: UILabel!
+    @IBOutlet weak var sectionCountLabel: UILabel!
     
     weak var lesson: Lesson!
     
@@ -21,7 +22,7 @@ class LessonCardView: UIView {
         xibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
         self.addSubview(xibView)
-print(self.bounds)
+
         let cardMaskPath = UIBezierPath(roundedRect: self.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 10.0, height: 10.0))
         let cardMaskLayer = CAShapeLayer(layer: cardMaskPath)
         cardMaskLayer.frame = self.bounds
@@ -38,6 +39,11 @@ print(self.bounds)
 
     func layout() {
         lessonTitleLabel.text = lesson.title
+        if (lesson.sections.count == 1) {
+            sectionCountLabel.text = String(lesson.sections.count) + " section"
+        } else {
+            sectionCountLabel.text = String(lesson.sections.count) + " sections"
+        }
     }
     
 }
