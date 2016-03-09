@@ -72,8 +72,6 @@ extension CategoryViewController: UICollectionViewDataSource {
         
         // TODO set the offset of each row
         
-        cell.backgroundColor = UIColor.blueColor()
-        
         return cell
         
     }

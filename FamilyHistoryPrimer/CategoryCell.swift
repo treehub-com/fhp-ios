@@ -26,9 +26,11 @@ extension CategoryCell : UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("moduleCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("moduleCell", forIndexPath: indexPath) as! ModuleCell
         
-        cell.backgroundColor = UIColor.purpleColor()
+        cell.moduleCard.categoryTitle = category.title
+        cell.moduleCard.module = category.modules[indexPath.item]
+        cell.moduleCard.layout()
         
         return cell
     }
