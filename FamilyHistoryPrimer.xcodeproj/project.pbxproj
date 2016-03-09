@@ -17,6 +17,7 @@
 		52258B3C1C909DBE008E04F5 /* TextSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B3B1C909DBE008E04F5 /* TextSection.swift */; };
 		52258B3E1C909EB1008E04F5 /* YesNoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B3D1C909EB1008E04F5 /* YesNoSection.swift */; };
 		52258B401C909F0E008E04F5 /* ChallengeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B3F1C909F0E008E04F5 /* ChallengeSection.swift */; };
+		52258B431C90B33C008E04F5 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B421C90B33C008E04F5 /* LessonViewController.swift */; };
 		5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F4E31C88AA6C00A27649 /* AppDelegate.swift */; };
 		5247F4E91C88AA6C00A27649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247F4E71C88AA6C00A27649 /* Main.storyboard */; };
 		5247F4EB1C88AA6C00A27649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5247F4EA1C88AA6C00A27649 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		52258B3B1C909DBE008E04F5 /* TextSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSection.swift; sourceTree = "<group>"; };
 		52258B3D1C909EB1008E04F5 /* YesNoSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoSection.swift; sourceTree = "<group>"; };
 		52258B3F1C909F0E008E04F5 /* ChallengeSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeSection.swift; sourceTree = "<group>"; };
+		52258B421C90B33C008E04F5 /* LessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 		5247F4E01C88AA6C00A27649 /* FamilyHistoryPrimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyHistoryPrimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5247F4E31C88AA6C00A27649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5247F4E81C88AA6C00A27649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			name = ModulePage;
 			sourceTree = "<group>";
 		};
+		52258B411C90B2FF008E04F5 /* LessonPage */ = {
+			isa = PBXGroup;
+			children = (
+				52258B421C90B33C008E04F5 /* LessonViewController.swift */,
+			);
+			name = LessonPage;
+			sourceTree = "<group>";
+		};
 		5247F4D71C88AA6C00A27649 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		5247F4E21C88AA6C00A27649 /* FamilyHistoryPrimer */ = {
 			isa = PBXGroup;
 			children = (
+				52258B411C90B2FF008E04F5 /* LessonPage */,
 				52258B301C9080A1008E04F5 /* ModulePage */,
 				5247F5171C8904FF00A27649 /* Cards */,
 				5247F5071C88B8E600A27649 /* Util */,
@@ -332,6 +343,7 @@
 				5247F5121C88EA1400A27649 /* Module.swift in Sources */,
 				52258B3C1C909DBE008E04F5 /* TextSection.swift in Sources */,
 				5247F50E1C88E7B700A27649 /* Category.swift in Sources */,
+				52258B431C90B33C008E04F5 /* LessonViewController.swift in Sources */,
 				5247F5141C88EC1C00A27649 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -149,6 +149,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="lessonCard" destination="3lS-1Z-MJ1" id="IHq-dZ-8BA"/>
+                                            <segue destination="PYr-DG-DWE" kind="show" id="ZY1-ad-Gzm"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -176,6 +177,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skQ-9j-sfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1889" y="475"/>
+        </scene>
+        <!--Lesson Page-->
+        <scene sceneID="Uu5-nO-G7Y">
+            <objects>
+                <viewController id="PYr-DG-DWE" customClass="LessonViewController" customModule="FamilyHistoryPrimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YiG-F5-R2Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="9og-zR-54h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E5o-Sj-lJr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lesson Page" id="aEI-U1-0pQ"/>
+                    <connections>
+                        <outlet property="navItem" destination="aEI-U1-0pQ" id="GBF-fE-TSW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0s-u0-UKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2608" y="475"/>
         </scene>
         <!--Nav-->
         <scene sceneID="Ksk-py-OKk">

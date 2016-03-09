@@ -34,8 +34,14 @@ class ModuleViewController: UIViewController {
         insets.right = sideValue
 
         self.lessonCollectionView.contentInset = insets
-        
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let lessonCell = sender as! LessonCell
+        let lessonView = segue.destinationViewController as! LessonViewController
+        lessonView.lesson = lessonCell.lessonCard.lesson
+    }
+    
 }
 
 extension ModuleViewController : UICollectionViewDataSource {
