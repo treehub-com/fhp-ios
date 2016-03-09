@@ -10,11 +10,9 @@ import UIKit
 
 class ModuleCardView: UIView {
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var categoryTitleLabel: UILabel!
     @IBOutlet weak var moduleTitleLabel: UILabel!
     @IBOutlet weak var lessonNumberLabel: UILabel!
 
-    var categoryTitle: String!
     weak var module: Module!
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,7 +38,6 @@ class ModuleCardView: UIView {
     }
     
     func layout() {
-        categoryTitleLabel.text = categoryTitle
         moduleTitleLabel.text = module.title
         if (module.lessons.count == 1) {
             lessonNumberLabel.text = String(module.lessons.count) + " lesson"

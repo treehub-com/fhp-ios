@@ -20,7 +20,7 @@ class CategoryViewController: UIViewController {
 
         loadCategories()
         
-        navItem.title = "Family History: A Primer"
+        navItem.title = categories[0].title
     }
     
     // Set insets appropriately
@@ -71,9 +71,9 @@ extension CategoryViewController: UICollectionViewDataSource {
         
         // Set moduleCollectionView top and bottom insets
         var insets = cell.moduleCollectionView.contentInset
-        let value = (self.categoryCollectionView.frame.height - (cell.moduleCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height) * 0.5
-        insets.top = value
-        insets.bottom = value
+        let value = (self.categoryCollectionView.frame.height - (cell.moduleCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height)
+        insets.top = 30
+        insets.bottom = value - 30
         cell.moduleCollectionView.contentInset = insets
         
         // TODO set the offset of each row
@@ -90,4 +90,18 @@ extension CategoryViewController: UICollectionViewDelegateFlowLayout {
         return CGSizeMake((collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width, collectionView.bounds.height)
         //return CGSizeMake(collectionView.bounds.width, (collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height)
     }
+}
+
+extension CategoryViewController: UIScrollViewDelegate {
+    
+    // Modify the Nav bar correctly for each section
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let adjustedOffset = categoryCollectionView.contentOffset.x + categoryCollectionView.contentInset.left
+        let collectionViewFlowLayout = categoryCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let itemWidth = collectionViewFlowLayout.itemSize.width + collectionViewFlowLayout.minimumLineSpacing
+        
+        let currentIndex = Int(adjustedOffset / itemWidth);
+        self.navItem.title = categories[currentIndex].title
+    }
+    
 }
