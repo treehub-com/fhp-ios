@@ -23,7 +23,7 @@ class ChallengeSectionCardView: SectionCardView {
     
     func didLoad() {
         let xibView = NSBundle.mainBundle().loadNibNamed("ChallengeSectionCard", owner: self, options: nil)[0] as! UIView
-        xibView.frame = self.frame
+        xibView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: self.frame.size)
         xibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
         self.addSubview(xibView)

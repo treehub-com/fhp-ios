@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5221E7601C91D25F004CF9F6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221E75F1C91D25F004CF9F6 /* Color.swift */; };
+		5221E7621C91E0B0004CF9F6 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221E7611C91E0B0004CF9F6 /* Direction.swift */; };
 		52258B2D1C907873008E04F5 /* ModuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B2C1C907873008E04F5 /* ModuleCell.swift */; };
 		52258B2F1C907C45008E04F5 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B2E1C907C45008E04F5 /* Lesson.swift */; };
 		52258B321C9080C7008E04F5 /* ModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B311C9080C7008E04F5 /* ModuleViewController.swift */; };
@@ -55,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		5221E75F1C91D25F004CF9F6 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5221E7611C91E0B0004CF9F6 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		52258B2C1C907873008E04F5 /* ModuleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleCell.swift; sourceTree = "<group>"; };
 		52258B2E1C907C45008E04F5 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		52258B311C9080C7008E04F5 /* ModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				5247F5081C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift */,
 				5247F5151C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift */,
 				5221E75F1C91D25F004CF9F6 /* Color.swift */,
+				5221E7611C91E0B0004CF9F6 /* Direction.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				5247F5161C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift in Sources */,
 				52258B361C908C0A008E04F5 /* LessonCardView.swift in Sources */,
 				52258B4D1C90DF29008E04F5 /* YesNoSectionCardView.swift in Sources */,
+				5221E7621C91E0B0004CF9F6 /* Direction.swift in Sources */,
 				5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */,
 				5247F5191C8905F300A27649 /* ModuleCardView.swift in Sources */,
 				52258B2F1C907C45008E04F5 /* Lesson.swift in Sources */,
