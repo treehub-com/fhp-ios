@@ -16,6 +16,7 @@ class LessonViewController: UIViewController {
     var cards: [SectionCardView] = []
     
     // Placement Variables
+    let xScale: CGFloat = 0.007
     let cardSpacing: CGFloat = 13.0
     var readOffset: CGFloat = -380
     var unreadOffset: CGFloat = 100
@@ -42,17 +43,21 @@ class LessonViewController: UIViewController {
         
         for (i, section) in lesson.sections.enumerate() {
             let frame = CGRect(x: 0.0, y: CGFloat(i)*cardSpacing + unreadOffset, width: 300.0, height: 400.0)
+            let transform = CGAffineTransformMakeScale(1 - (xScale * CGFloat(i)), 1)
             switch(section.type) {
             case "text":
                 let card = TextSectionCardView(frame: frame)
+                card.transform = transform
                 cards.append(card)
                 break
             case "yes-no":
                 let card = YesNoSectionCardView(frame: frame)
+                card.transform = transform
                 cards.append(card)
                 break
             case "challenge":
                 let card = ChallengeSectionCardView(frame: frame)
+                card.transform = transform
                 cards.append(card)
             default:
                 break
@@ -130,10 +135,13 @@ class LessonViewController: UIViewController {
                     
                     UIView.animateWithDuration(0.37, animations: {
                         card.frame.origin = newOrigin
+                        var i = 0
                         for card in self.cards[shiftOffset..<self.cards.count] {
                             var newOrigin = card.frame.origin
                             newOrigin.y -= self.cardSpacing
                             card.frame.origin = newOrigin
+                            card.transform = CGAffineTransformMakeScale(1 - (self.xScale * CGFloat(i)), 1)
+                            i += 1
                         }
                     })
                 } else {
@@ -155,10 +163,14 @@ class LessonViewController: UIViewController {
                     
                     UIView.animateWithDuration(0.37, animations: {
                         card.frame.origin = newOrigin
+                        card.transform = CGAffineTransformMakeScale(1, 1)
+                        var i = 1
                         for card in self.cards[shiftOffset..<self.cards.count] {
                             var newOrigin = card.frame.origin
                             newOrigin.y += self.cardSpacing
                             card.frame.origin = newOrigin
+                            card.transform = CGAffineTransformMakeScale(1 - (self.xScale * CGFloat(i)), 1)
+                            i += 1
                         }
                     })
                 } else {
