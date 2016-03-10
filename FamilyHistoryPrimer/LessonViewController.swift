@@ -95,7 +95,8 @@ class LessonViewController: UIViewController {
             }
         case .Changed:
             //print("changed")
-            let offset = initialPoint.y - point.y
+            let offsetY = initialPoint.y - point.y
+            let offsetX = initialPoint.x - point.x
             if direction == .None {
                 if (initialPoint.y - point.y) > 0 && unreadIndex < cards.count {
                     direction = .Up
@@ -108,15 +109,17 @@ class LessonViewController: UIViewController {
                 }
             }
             if direction == .Up {
-                let actualOffset = max(offset, 0)
+                let actualOffset = max(offsetY, 0)
                 var newOrigin = unreadInitialOrigin
                 newOrigin.y = unreadInitialOrigin.y - actualOffset
+                newOrigin.x = unreadInitialOrigin.x - offsetX
                 cards[unreadIndex].frame.origin = newOrigin
             }
             if direction == .Down {
-                let actualOffset = min(offset, 0)
+                let actualOffset = min(offsetY, 0)
                 var newOrigin = readInitialOrigin
                 newOrigin.y = readInitialOrigin.y - actualOffset
+                newOrigin.x = unreadInitialOrigin.x - offsetX
                 cards[readIndex].frame.origin = newOrigin
             }
         case .Ended:
