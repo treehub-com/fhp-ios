@@ -13,11 +13,12 @@ class LessonCardView: UIView {
     @IBOutlet weak var lessonTitleLabel: UILabel!
     @IBOutlet weak var sectionCountLabel: UILabel!
     
+    var xibView: UIView!
     weak var lesson: Lesson!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let xibView = NSBundle.mainBundle().loadNibNamed("LessonCard", owner: self, options: nil)[0] as! UIView
+        xibView = NSBundle.mainBundle().loadNibNamed("LessonCard", owner: self, options: nil)[0] as! UIView
         xibView.frame = self.frame
         xibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
@@ -39,6 +40,7 @@ class LessonCardView: UIView {
 
     func layout() {
         lessonTitleLabel.text = lesson.title
+        xibView.backgroundColor = lesson.color
         if (lesson.sections.count == 1) {
             sectionCountLabel.text = String(lesson.sections.count) + " section"
         } else {

@@ -42,6 +42,17 @@ class CategoryViewController: UIViewController {
         moduleView.module = moduleCell.moduleCard.module
     }
     
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        let moduleCell = sender as! ModuleCell
+        if (moduleCell.moduleCard.module.lessons.count == 0) {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    
+    
     func loadCategories() {
         let path = NSBundle.mainBundle().pathForResource("learn", ofType: "json")
         let jsonData = NSData(contentsOfFile:path!)

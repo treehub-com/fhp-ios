@@ -7,13 +7,16 @@
 //
 
 import SwiftyJSON
+import UIKit
 
 class Lesson {
     var title: String
+    var color: UIColor
     var sections: [Section] = []
     
     init(lesson: JSON) {
         self.title = lesson["title"].stringValue
+        self.color = Color.fromHexString(lesson["color"].stringValue)
         
         let jsonSections: Array<JSON> = lesson["sections"].arrayValue
         

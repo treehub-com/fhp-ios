@@ -7,14 +7,17 @@
 //
 
 import SwiftyJSON
+import UIKit
 
 class Category {
     
     var title: String
+    var color: UIColor
     var modules: [Module] = []
     
     init(category: JSON) {
         self.title = category["title"].stringValue
+        self.color = Color.fromHexString(category["color"].stringValue)
         
         let jsonModules: Array<JSON> = category["modules"].arrayValue
         

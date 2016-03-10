@@ -13,11 +13,12 @@ class ModuleCardView: UIView {
     @IBOutlet weak var moduleTitleLabel: UILabel!
     @IBOutlet weak var lessonNumberLabel: UILabel!
 
+    var xibView: UIView!
     weak var module: Module!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let xibView = NSBundle.mainBundle().loadNibNamed("ModuleCard", owner: self, options: nil)[0] as! UIView
+        xibView = NSBundle.mainBundle().loadNibNamed("ModuleCard", owner: self, options: nil)[0] as! UIView
         xibView.frame = self.frame
         xibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
@@ -39,9 +40,13 @@ class ModuleCardView: UIView {
     
     func layout() {
         moduleTitleLabel.text = module.title
-        if (module.lessons.count == 1) {
+        xibView.backgroundColor = module.color
+        switch module.lessons.count {
+        case 0:
+            lessonNumberLabel.text = ""
+        case 1:
             lessonNumberLabel.text = String(module.lessons.count) + " lesson"
-        } else {
+        default:
             lessonNumberLabel.text = String(module.lessons.count) + " lessons"
         }
     }
