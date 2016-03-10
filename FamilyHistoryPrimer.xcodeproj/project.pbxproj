@@ -18,6 +18,13 @@
 		52258B3E1C909EB1008E04F5 /* YesNoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B3D1C909EB1008E04F5 /* YesNoSection.swift */; };
 		52258B401C909F0E008E04F5 /* ChallengeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B3F1C909F0E008E04F5 /* ChallengeSection.swift */; };
 		52258B431C90B33C008E04F5 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B421C90B33C008E04F5 /* LessonViewController.swift */; };
+		52258B451C90D5DB008E04F5 /* TextSectionCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52258B441C90D5DB008E04F5 /* TextSectionCard.xib */; };
+		52258B471C90D600008E04F5 /* TextSectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B461C90D600008E04F5 /* TextSectionCardView.swift */; };
+		52258B491C90DE05008E04F5 /* YesNoSectionCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52258B481C90DE05008E04F5 /* YesNoSectionCard.xib */; };
+		52258B4B1C90DE87008E04F5 /* ChallengeSectionCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52258B4A1C90DE87008E04F5 /* ChallengeSectionCard.xib */; };
+		52258B4D1C90DF29008E04F5 /* YesNoSectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B4C1C90DF29008E04F5 /* YesNoSectionCardView.swift */; };
+		52258B4F1C90DF43008E04F5 /* ChallengeSectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B4E1C90DF43008E04F5 /* ChallengeSectionCardView.swift */; };
+		52258B511C90E09D008E04F5 /* SectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52258B501C90E09D008E04F5 /* SectionCardView.swift */; };
 		5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F4E31C88AA6C00A27649 /* AppDelegate.swift */; };
 		5247F4E91C88AA6C00A27649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5247F4E71C88AA6C00A27649 /* Main.storyboard */; };
 		5247F4EB1C88AA6C00A27649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5247F4EA1C88AA6C00A27649 /* Assets.xcassets */; };
@@ -57,6 +64,13 @@
 		52258B3D1C909EB1008E04F5 /* YesNoSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoSection.swift; sourceTree = "<group>"; };
 		52258B3F1C909F0E008E04F5 /* ChallengeSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeSection.swift; sourceTree = "<group>"; };
 		52258B421C90B33C008E04F5 /* LessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
+		52258B441C90D5DB008E04F5 /* TextSectionCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextSectionCard.xib; sourceTree = "<group>"; };
+		52258B461C90D600008E04F5 /* TextSectionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSectionCardView.swift; sourceTree = "<group>"; };
+		52258B481C90DE05008E04F5 /* YesNoSectionCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YesNoSectionCard.xib; sourceTree = "<group>"; };
+		52258B4A1C90DE87008E04F5 /* ChallengeSectionCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeSectionCard.xib; sourceTree = "<group>"; };
+		52258B4C1C90DF29008E04F5 /* YesNoSectionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YesNoSectionCardView.swift; sourceTree = "<group>"; };
+		52258B4E1C90DF43008E04F5 /* ChallengeSectionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeSectionCardView.swift; sourceTree = "<group>"; };
+		52258B501C90E09D008E04F5 /* SectionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionCardView.swift; sourceTree = "<group>"; };
 		5247F4E01C88AA6C00A27649 /* FamilyHistoryPrimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyHistoryPrimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5247F4E31C88AA6C00A27649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5247F4E81C88AA6C00A27649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +215,13 @@
 				5247F51A1C8906F000A27649 /* ModuleCard.xib */,
 				52258B351C908C0A008E04F5 /* LessonCardView.swift */,
 				52258B331C908BE0008E04F5 /* LessonCard.xib */,
+				52258B501C90E09D008E04F5 /* SectionCardView.swift */,
+				52258B461C90D600008E04F5 /* TextSectionCardView.swift */,
+				52258B441C90D5DB008E04F5 /* TextSectionCard.xib */,
+				52258B4C1C90DF29008E04F5 /* YesNoSectionCardView.swift */,
+				52258B481C90DE05008E04F5 /* YesNoSectionCard.xib */,
+				52258B4E1C90DF43008E04F5 /* ChallengeSectionCardView.swift */,
+				52258B4A1C90DE87008E04F5 /* ChallengeSectionCard.xib */,
 			);
 			name = Cards;
 			sourceTree = "<group>";
@@ -288,6 +309,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5247F5101C88E8ED00A27649 /* learn.json in Resources */,
+				52258B451C90D5DB008E04F5 /* TextSectionCard.xib in Resources */,
+				52258B491C90DE05008E04F5 /* YesNoSectionCard.xib in Resources */,
+				52258B4B1C90DE87008E04F5 /* ChallengeSectionCard.xib in Resources */,
 				5247F4EE1C88AA6C00A27649 /* LaunchScreen.storyboard in Resources */,
 				5247F51B1C8906F000A27649 /* ModuleCard.xib in Resources */,
 				52258B341C908BE0008E04F5 /* LessonCard.xib in Resources */,
@@ -332,18 +356,22 @@
 				5247F5061C88AB8700A27649 /* CategoryViewController.swift in Sources */,
 				52258B401C909F0E008E04F5 /* ChallengeSection.swift in Sources */,
 				52258B2D1C907873008E04F5 /* ModuleCell.swift in Sources */,
+				52258B471C90D600008E04F5 /* TextSectionCardView.swift in Sources */,
 				52258B3A1C909D7C008E04F5 /* Section.swift in Sources */,
 				5247F5161C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift in Sources */,
 				52258B361C908C0A008E04F5 /* LessonCardView.swift in Sources */,
+				52258B4D1C90DF29008E04F5 /* YesNoSectionCardView.swift in Sources */,
 				5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */,
 				5247F5191C8905F300A27649 /* ModuleCardView.swift in Sources */,
 				52258B2F1C907C45008E04F5 /* Lesson.swift in Sources */,
 				5247F5091C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift in Sources */,
 				52258B381C908D41008E04F5 /* LessonCell.swift in Sources */,
 				5247F5121C88EA1400A27649 /* Module.swift in Sources */,
+				52258B4F1C90DF43008E04F5 /* ChallengeSectionCardView.swift in Sources */,
 				52258B3C1C909DBE008E04F5 /* TextSection.swift in Sources */,
 				5247F50E1C88E7B700A27649 /* Category.swift in Sources */,
 				52258B431C90B33C008E04F5 /* LessonViewController.swift in Sources */,
+				52258B511C90E09D008E04F5 /* SectionCardView.swift in Sources */,
 				5247F5141C88EC1C00A27649 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

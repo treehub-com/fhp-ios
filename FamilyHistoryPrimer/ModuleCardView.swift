@@ -23,11 +23,11 @@ class ModuleCardView: UIView {
         
         self.addSubview(xibView)
         
-        let cardMaskPath = UIBezierPath(roundedRect: self.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 10.0, height: 10.0))
+        let cardMaskPath = UIBezierPath(roundedRect: xibView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 10.0, height: 10.0))
         let cardMaskLayer = CAShapeLayer(layer: cardMaskPath)
-        cardMaskLayer.frame = self.bounds
+        cardMaskLayer.frame = xibView.bounds
         cardMaskLayer.path = cardMaskPath.CGPath
-        self.layer.mask = cardMaskLayer
+        xibView.layer.mask = cardMaskLayer
 
         let contentMaskPath = UIBezierPath(roundedRect: contentView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 5.0, height: 5.0))
         let contentMaskLayer = CAShapeLayer(layer: contentMaskPath)

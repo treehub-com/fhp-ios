@@ -1,5 +1,5 @@
 //
-//  LessonCardView.swift
+//  TextSectionCardView.swift
 //  FamilyHistoryPrimer
 //
 //  Created by John M Clark on 3/9/16.
@@ -8,21 +8,26 @@
 
 import UIKit
 
-class LessonCardView: UIView {
+class TextSectionCardView: SectionCardView {
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var lessonTitleLabel: UILabel!
-    @IBOutlet weak var sectionCountLabel: UILabel!
-    
-    weak var lesson: Lesson!
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        didLoad()
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        let xibView = NSBundle.mainBundle().loadNibNamed("LessonCard", owner: self, options: nil)[0] as! UIView
+        didLoad()
+    }
+    
+    func didLoad() {
+        let xibView = NSBundle.mainBundle().loadNibNamed("TextSectionCard", owner: self, options: nil)[0] as! UIView
         xibView.frame = self.frame
         xibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         
         self.addSubview(xibView)
-
+        
         let cardMaskPath = UIBezierPath(roundedRect: xibView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 10.0, height: 10.0))
         let cardMaskLayer = CAShapeLayer(layer: cardMaskPath)
         cardMaskLayer.frame = xibView.bounds
@@ -34,16 +39,6 @@ class LessonCardView: UIView {
         contentMaskLayer.frame = contentView.bounds
         contentMaskLayer.path = contentMaskPath.CGPath
         contentView.layer.mask = contentMaskLayer
-        
     }
 
-    func layout() {
-        lessonTitleLabel.text = lesson.title
-        if (lesson.sections.count == 1) {
-            sectionCountLabel.text = String(lesson.sections.count) + " section"
-        } else {
-            sectionCountLabel.text = String(lesson.sections.count) + " sections"
-        }
-    }
-    
 }
