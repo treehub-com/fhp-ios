@@ -12,6 +12,7 @@
                 <outlet property="contentView" destination="rkQ-vF-GtP" id="MiL-ou-KYL"/>
                 <outlet property="lessonNumberLabel" destination="iE7-eS-22w" id="JAW-4w-2Ik"/>
                 <outlet property="moduleImageView" destination="2No-6q-aZc" id="HuT-w8-VoJ"/>
+                <outlet property="moduleSubtitleLabel" destination="L5J-UN-GdK" id="QjR-uw-v5d"/>
                 <outlet property="moduleTitleLabel" destination="1Wp-F0-25y" id="FzE-Hg-gVq"/>
             </connections>
         </placeholder>
@@ -48,6 +49,15 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5J-UN-GdK">
+                            <rect key="frame" x="8" y="237" width="264" height="116"/>
+                            <string key="text" base64-UTF8="YES">
+U3VidGl0bGUREREREQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ
+</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>

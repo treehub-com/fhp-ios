@@ -10,22 +10,21 @@ import SwiftyJSON
 import UIKit
 
 class Module {
-    var title: String
     var color: UIColor
+    var title: String
+    var subtitle: String?
     var img: UIImage?
     var lessons: [Lesson] = []
     
     init(module: JSON) {
-        self.title = module["title"].stringValue
         self.color = Color.fromHexString(module["color"].stringValue)
-        
+        self.title = module["title"].stringValue
+        self.subtitle = module["subtitle"].string
         let imagePath = module["img"].string
         
         if imagePath != nil {
-            print(imagePath)
             let path = NSBundle.mainBundle().pathForResource("images/" + imagePath!, ofType: "png")
             self.img = UIImage(contentsOfFile: path!)
-            print(img?.size)
         }
         
         let jsonLessons: Array<JSON> = module["lessons"].arrayValue
