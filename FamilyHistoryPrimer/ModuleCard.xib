@@ -3,12 +3,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModuleCardView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="rkQ-vF-GtP" id="MiL-ou-KYL"/>
                 <outlet property="lessonNumberLabel" destination="iE7-eS-22w" id="JAW-4w-2Ik"/>
+                <outlet property="moduleImageView" destination="2No-6q-aZc" id="HuT-w8-VoJ"/>
                 <outlet property="moduleTitleLabel" destination="1Wp-F0-25y" id="FzE-Hg-gVq"/>
             </connections>
         </placeholder>
@@ -20,20 +23,41 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkQ-vF-GtP">
                     <rect key="frame" x="10" y="10" width="280" height="380"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lesson Count" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-eS-22w">
-                            <rect key="frame" x="140" y="351" width="132" height="21"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pr5-H5-wMF">
+                            <rect key="frame" x="8" y="16" width="264" height="213"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Module Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wp-F0-25y">
+                                    <rect key="frame" x="0.0" y="0.0" width="264" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2No-6q-aZc">
+                                    <rect key="frame" x="0.0" y="37" width="264" height="176"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="2No-6q-aZc" secondAttribute="height" multiplier="3:2" id="FX7-tR-kEX"/>
+                                        <constraint firstAttribute="width" constant="264" id="k6B-0r-Tey"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson Count" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-eS-22w">
+                            <rect key="frame" x="140" y="352" width="132" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="132" id="Jcf-Y1-vHI"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Module Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wp-F0-25y">
-                            <rect key="frame" x="8" y="20" width="264" height="32"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Pr5-H5-wMF" firstAttribute="trailing" secondItem="iE7-eS-22w" secondAttribute="trailing" id="6BN-xM-LsA"/>
+                        <constraint firstItem="Pr5-H5-wMF" firstAttribute="leading" secondItem="rkQ-vF-GtP" secondAttribute="leadingMargin" id="Dt8-bf-HzW"/>
+                        <constraint firstItem="Pr5-H5-wMF" firstAttribute="top" secondItem="rkQ-vF-GtP" secondAttribute="top" constant="16" id="EkK-8W-K8i"/>
+                        <constraint firstAttribute="bottom" secondItem="iE7-eS-22w" secondAttribute="bottom" constant="8" id="Ki2-X3-Oho"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.5" blue="0.077772619348007055" alpha="1" colorSpace="calibratedRGB"/>

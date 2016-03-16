@@ -33,9 +33,9 @@ for (var dir of ['local', 'learn']) {
 
       // Copy Image if it exists
       try {
-        var imgPath = dir + '-' + categoryIdx + '-' + moduleIdx + '.png';
+        var imgPath = dir + '-' + categoryIdx + '-' + moduleIdx;
         var img = fs.readFileSync('./' + dir + '/' + categoryPath + '/' + modulePath + '/img.png');
-        fs.writeFileSync('./images/' + imgPath, img);
+        fs.writeFileSync('./images/' + imgPath + '.png', img);
         module.img = imgPath;
       } catch (error) {
         // Just ignore this

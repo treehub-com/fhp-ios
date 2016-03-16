@@ -11,6 +11,7 @@ import UIKit
 class ModuleCardView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var moduleTitleLabel: UILabel!
+    @IBOutlet weak var moduleImageView: UIImageView!
     @IBOutlet weak var lessonNumberLabel: UILabel!
 
     var xibView: UIView!
@@ -40,6 +41,7 @@ class ModuleCardView: UIView {
     
     func layout() {
         moduleTitleLabel.text = module.title
+        moduleImageView.image = module.img
         xibView.backgroundColor = module.color
         switch module.lessons.count {
         case 0:
