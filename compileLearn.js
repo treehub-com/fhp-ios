@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var fs = require('fs');
 
 var colors = {
@@ -29,6 +30,16 @@ for (var dir of ['local', 'learn']) {
       var modulePath = category.modules[moduleIdx];
       var module = require('./' + dir + '/' + categoryPath + '/' + modulePath + '/module.json');
       module.color = color;
+
+      // Copy Image if it exists
+      try {
+        var imgPath = dir + '-' + categoryIdx + '-' + moduleIdx + '.png';
+        var img = fs.readFileSync('./' + dir + '/' + categoryPath + '/' + modulePath + '/img.png');
+        fs.writeFileSync('./images/' + imgPath, img);
+        module.img = imgPath;
+      } catch (error) {
+        // Just ignore this
+      }
 
       // Lessons
       for (var lessonIdx in module.lessons) {
