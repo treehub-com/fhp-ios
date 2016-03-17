@@ -41,3 +41,7 @@ learn
 
 # Ignore build Carthage
 Carthage
+
+# FHP specific
+images/
+learn.json
