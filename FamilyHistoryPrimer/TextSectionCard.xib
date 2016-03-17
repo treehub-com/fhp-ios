@@ -56,7 +56,7 @@
                 <constraint firstItem="eyy-pB-hGU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="r95-xV-LL4"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="497" y="387"/>
+            <point key="canvasLocation" x="586" y="401"/>
         </view>
     </objects>
 </document>
