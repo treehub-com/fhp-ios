@@ -55,6 +55,7 @@
                 <constraint firstItem="eyy-pB-hGU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="jy6-co-4HG"/>
                 <constraint firstItem="eyy-pB-hGU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="r95-xV-LL4"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="586" y="401"/>
         </view>

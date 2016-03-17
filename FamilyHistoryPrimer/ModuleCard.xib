@@ -77,6 +77,7 @@ U3VidGl0bGUREREREQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ
                 <constraint firstAttribute="trailing" secondItem="rkQ-vF-GtP" secondAttribute="trailing" constant="10" id="iPF-BI-EoI"/>
                 <constraint firstItem="rkQ-vF-GtP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="mB6-p4-g6r"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="312" y="408"/>
         </view>
