@@ -47,6 +47,7 @@ class LessonViewController: UIViewController {
             switch(section.type) {
             case "text":
                 let card = TextSectionCardView(frame: frame)
+                card.section = section as! TextSection
                 card.transform = transform
                 cards.append(card)
                 break
@@ -67,6 +68,7 @@ class LessonViewController: UIViewController {
         
         for card in cards.reverse() {
             contentView.addSubview(card)
+            card.layout()
         }
 
         let pan = UIPanGestureRecognizer(target:self, action:"pan:")

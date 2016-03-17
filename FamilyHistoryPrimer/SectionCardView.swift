@@ -9,7 +9,7 @@
 import UIKit
 
 class SectionCardView: UIView {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -18,4 +18,7 @@ class SectionCardView: UIView {
         super.init(coder: aDecoder)
     }
 
+    func layout() {
+        
+    }
 }

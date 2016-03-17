@@ -10,7 +10,11 @@ import UIKit
 
 class TextSectionCardView: SectionCardView {
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var sectionImageView: UIImageView!
+    @IBOutlet weak var sectionContentLabel: UILabel!
 
+    var section: TextSection!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         didLoad()
@@ -41,4 +45,9 @@ class TextSectionCardView: SectionCardView {
         contentView.layer.mask = contentMaskLayer
     }
 
+    override func layout() {
+        sectionImageView.image = section.img
+        sectionContentLabel.text = section.content
+    }
+    
 }
