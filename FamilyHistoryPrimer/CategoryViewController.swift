@@ -21,6 +21,7 @@ class CategoryViewController: UIViewController {
         loadCategories()
         
         navItem.title = categories[0].title
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
     }
     
     // Set insets appropriately
