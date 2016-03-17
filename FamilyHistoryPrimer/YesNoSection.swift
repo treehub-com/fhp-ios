@@ -10,7 +10,7 @@ import SwiftyJSON
 
 class YesNoSection: Section {
     
-    init(json: JSON) {
+    init(section: JSON) {
         super.init(type: "yes-no")
     }
 }

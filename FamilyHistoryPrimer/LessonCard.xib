@@ -3,11 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LessonCardView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="xzJ-fT-9kd" id="HEh-C1-YAG"/>
+                <outlet property="lessonImageView" destination="SEq-Cy-0fV" id="c71-Ft-o2R"/>
                 <outlet property="lessonTitleLabel" destination="zJC-YD-jIu" id="tbm-nQ-wch"/>
                 <outlet property="sectionCountLabel" destination="nWI-Ph-FWn" id="URe-e2-TZO"/>
             </connections>
@@ -20,12 +23,24 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xzJ-fT-9kd">
                     <rect key="frame" x="10" y="10" width="280" height="380"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lesson Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJC-YD-jIu">
-                            <rect key="frame" x="8" y="20" width="264" height="32"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XZQ-dk-3Nv">
+                            <rect key="frame" x="8" y="20" width="264" height="213"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJC-YD-jIu">
+                                    <rect key="frame" x="0.0" y="0.0" width="264" height="29"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SEq-Cy-0fV">
+                                    <rect key="frame" x="0.0" y="37" width="264" height="176"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="264" id="Pr0-z3-ScK"/>
+                                        <constraint firstAttribute="width" secondItem="SEq-Cy-0fV" secondAttribute="height" multiplier="3:2" id="wdP-cH-h4e"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Section Count" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWI-Ph-FWn">
                             <rect key="frame" x="140" y="351" width="132" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -34,6 +49,11 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="XZQ-dk-3Nv" firstAttribute="trailing" secondItem="xzJ-fT-9kd" secondAttribute="trailingMargin" id="0Ku-hP-MME"/>
+                        <constraint firstItem="XZQ-dk-3Nv" firstAttribute="top" secondItem="xzJ-fT-9kd" secondAttribute="top" constant="20" id="FLE-ea-gRr"/>
+                        <constraint firstItem="XZQ-dk-3Nv" firstAttribute="leading" secondItem="xzJ-fT-9kd" secondAttribute="leadingMargin" id="rzt-wD-DbK"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>

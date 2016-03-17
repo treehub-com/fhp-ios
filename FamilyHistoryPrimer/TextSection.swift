@@ -7,10 +7,23 @@
 //
 
 import SwiftyJSON
+import UIKit
 
 class TextSection: Section {
     
-    init(json: JSON) {
+    var content: String?
+    var img: UIImage?
+    
+    init(section: JSON) {
         super.init(type: "text")
+        
+        self.content = section["content"].string
+        let imagePath = section["img"].string
+        
+        if imagePath != nil {
+            let filename = NSString(string: imagePath!)
+            let path = NSBundle.mainBundle().pathForResource("images/" + filename.stringByDeletingPathExtension, ofType: filename.pathExtension)
+            self.img = UIImage(contentsOfFile: path!)
+        }
     }
 }

@@ -10,7 +10,7 @@ import SwiftyJSON
 
 class ChallengeSection: Section {
     
-    init(json: JSON) {
+    init(section: JSON) {
         super.init(type: "challenge")
     }
 }
