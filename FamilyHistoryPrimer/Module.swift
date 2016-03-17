@@ -23,7 +23,8 @@ class Module {
         let imagePath = module["img"].string
         
         if imagePath != nil {
-            let path = NSBundle.mainBundle().pathForResource("images/" + imagePath!, ofType: "png")
+            let filename = NSString(string: imagePath!)
+            let path = NSBundle.mainBundle().pathForResource("images/" + filename.stringByDeletingPathExtension, ofType: filename.pathExtension)
             self.img = UIImage(contentsOfFile: path!)
         }
         

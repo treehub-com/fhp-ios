@@ -33,9 +33,9 @@ for (var dir of ['local', 'learn']) {
 
       // Copy Image if it exists
       try {
-        var imgPath = dir + '-' + categoryIdx + '-' + moduleIdx;
+        var imgPath = dir + '-' + categoryIdx + '-' + moduleIdx + '.png';
         var img = fs.readFileSync('./' + dir + '/' + categoryPath + '/' + modulePath + '/img.png');
-        fs.writeFileSync('./images/' + imgPath + '.png', img);
+        fs.writeFileSync('./images/' + imgPath, img);
         module.img = imgPath;
       } catch (error) {
         // Just ignore this
@@ -47,10 +47,33 @@ for (var dir of ['local', 'learn']) {
         var lesson = require('./' + dir + '/' + categoryPath + '/' + modulePath + '/' + lessonPath + '/lesson.json');
         lesson.color = color;
 
+        // Copy Image if it exists
+        try {
+          var imgPath = dir + '-' + categoryIdx + '-' + moduleIdx + '-' + lessonIdx + '.png';
+          var img = fs.readFileSync('./' + dir + '/' + categoryPath + '/' + modulePath + '/' + lessonPath + '/img.png');
+          fs.writeFileSync('./images/' + imgPath, img);
+          lesson.img = imgPath;
+        } catch (error) {
+          // Just ignore this
+        }
+
         // Sections
         for (var sectionIdx in lesson.sections) {
           var sectionPath = lesson.sections[sectionIdx];
           var section = require('./' + dir + '/' + categoryPath + '/' + modulePath + '/' + lessonPath + '/section/' + sectionPath + '.json');
+
+          // Copy Image if it exists
+          try {
+            if (section.image) {
+              var imgPath = dir + '-' + categoryIdx + '-' + moduleIdx + '-' + lessonIdx + '-' + section.image;
+              var img = fs.readFileSync('./' + dir + '/' + categoryPath + '/' + modulePath + '/' + lessonPath + '/image/' + section.image);
+              fs.writeFileSync('./images/' + imgPath, img);
+              section.img = imgPath;
+            }
+          } catch (error) {
+            // Just ignore this
+            console.log(error)
+          }
 
           lesson.sections[sectionIdx] = section;
         }
