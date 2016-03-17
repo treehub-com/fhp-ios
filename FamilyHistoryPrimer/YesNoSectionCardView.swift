@@ -10,7 +10,10 @@ import UIKit
 
 class YesNoSectionCardView: SectionCardView {
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var sectionTaskLabel: UILabel!
 
+    var section: YesNoSection!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         didLoad()
@@ -39,5 +42,9 @@ class YesNoSectionCardView: SectionCardView {
         contentMaskLayer.frame = contentView.bounds
         contentMaskLayer.path = contentMaskPath.CGPath
         contentView.layer.mask = contentMaskLayer
+    }
+    
+    override func layout() {
+        sectionTaskLabel.text = section.task
     }
 }

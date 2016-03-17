@@ -10,7 +10,11 @@ import SwiftyJSON
 
 class YesNoSection: Section {
     
+    var task: String?
+    
     init(section: JSON) {
         super.init(type: "yes-no")
+        
+        self.task = section["task"].string
     }
 }

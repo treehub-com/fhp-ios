@@ -11,6 +11,8 @@ import UIKit
 class ChallengeSectionCardView: SectionCardView {
     @IBOutlet weak var contentView: UIView!
 
+    var section: ChallengeSection!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         didLoad()

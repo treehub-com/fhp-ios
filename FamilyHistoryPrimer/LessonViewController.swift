@@ -53,11 +53,13 @@ class LessonViewController: UIViewController {
                 break
             case "yes-no":
                 let card = YesNoSectionCardView(frame: frame)
+                card.section = section as! YesNoSection
                 card.transform = transform
                 cards.append(card)
                 break
             case "challenge":
                 let card = ChallengeSectionCardView(frame: frame)
+                card.section = section as! ChallengeSection
                 card.transform = transform
                 cards.append(card)
             default:
