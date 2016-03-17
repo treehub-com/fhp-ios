@@ -22,7 +22,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyy-pB-hGU">
                     <rect key="frame" x="10" y="10" width="280" height="380"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WF0-1B-jaT">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BLw-Fv-wnN">
                             <rect key="frame" x="8" y="8" width="264" height="368"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="77m-R9-wvf">
@@ -43,16 +43,16 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="WF0-1B-jaT" firstAttribute="leading" secondItem="eyy-pB-hGU" secondAttribute="leadingMargin" id="WgO-QW-gkh"/>
-                        <constraint firstItem="WF0-1B-jaT" firstAttribute="top" secondItem="eyy-pB-hGU" secondAttribute="topMargin" id="xrD-Ve-4VE"/>
+                        <constraint firstItem="BLw-Fv-wnN" firstAttribute="top" secondItem="eyy-pB-hGU" secondAttribute="topMargin" id="3gk-dk-Dum"/>
+                        <constraint firstItem="BLw-Fv-wnN" firstAttribute="leading" secondItem="eyy-pB-hGU" secondAttribute="leadingMargin" id="718-Gd-kdP"/>
+                        <constraint firstAttribute="width" constant="280" id="QcU-vn-Gfa"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="eyy-pB-hGU" secondAttribute="bottom" constant="10" id="EgZ-aT-DBd"/>
-                <constraint firstAttribute="trailing" secondItem="eyy-pB-hGU" secondAttribute="trailing" constant="10" id="ibB-yd-md4"/>
-                <constraint firstItem="eyy-pB-hGU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="jy6-co-4HG"/>
+                <constraint firstItem="eyy-pB-hGU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="kBH-hM-KUD"/>
                 <constraint firstItem="eyy-pB-hGU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="r95-xV-LL4"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
