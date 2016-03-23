@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YesNoSectionCardView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="APz-eT-j21" id="G4O-ns-tXv"/>
+                <outlet property="noLabel" destination="eiI-cM-8hn" id="IK5-04-arB"/>
+                <outlet property="noView" destination="2Td-73-G1R" id="HYZ-Lt-cis"/>
+                <outlet property="questionsView" destination="Djd-rD-sra" id="qFn-Sg-WmE"/>
                 <outlet property="sectionTaskLabel" destination="YTP-qy-eye" id="Px1-a9-qEP"/>
+                <outlet property="yesLabel" destination="2Ak-kb-foY" id="ugX-er-NLU"/>
+                <outlet property="yesView" destination="TOf-zs-KeS" id="lwv-LS-L9e"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,22 +22,75 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APz-eT-j21">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APz-eT-j21">
                     <rect key="frame" x="10" y="10" width="280" height="380"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTP-qy-eye">
-                            <rect key="frame" x="8" y="8" width="264" height="58"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-2h-ErD">
+                            <rect key="frame" x="8" y="8" width="264" height="364"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Task" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTP-qy-eye">
+                                    <rect key="frame" x="0.0" y="0.0" width="264" height="58"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="4A7-Ld-nAu"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djd-rD-sra">
+                                    <rect key="frame" x="0.0" y="66" width="264" height="298"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOf-zs-KeS">
+                                            <rect key="frame" x="0.0" y="0.0" width="264" height="88"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ak-kb-foY">
+                                                    <rect key="frame" x="100" y="28" width="64" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Td-73-G1R">
+                                            <rect key="frame" x="0.0" y="210" width="264" height="88"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiI-cM-8hn">
+                                                    <rect key="frame" x="100" y="28" width="64" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="264" id="apy-Np-RM5"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="0cl-2h-ErD" firstAttribute="bottom" secondItem="APz-eT-j21" secondAttribute="bottomMargin" id="12m-4U-p3d"/>
+                        <constraint firstAttribute="width" constant="280" id="4ks-nh-6At"/>
+                        <constraint firstItem="0cl-2h-ErD" firstAttribute="leading" secondItem="APz-eT-j21" secondAttribute="leadingMargin" id="b11-jF-xVI"/>
+                        <constraint firstItem="0cl-2h-ErD" firstAttribute="top" secondItem="APz-eT-j21" secondAttribute="topMargin" id="fZz-X8-wg6"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="APz-eT-j21" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="6WP-He-RWN"/>
+                <constraint firstAttribute="bottom" secondItem="APz-eT-j21" secondAttribute="bottom" constant="10" id="9fw-Ag-fAT"/>
+                <constraint firstItem="APz-eT-j21" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ajw-5o-1C3"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="244" y="353"/>
         </view>
     </objects>
 </document>

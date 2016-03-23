@@ -11,10 +11,17 @@ import SwiftyJSON
 class YesNoSection: Section {
     
     var task: String?
+    var questions: [Question] = []
     
     init(section: JSON) {
         super.init(type: "yes-no")
         
         self.task = section["task"].string
+        
+        let jsonQuestions: Array<JSON> = section["questions"].arrayValue
+        
+        for question:JSON in jsonQuestions {
+            questions.append(Question(question: question))
+        }
     }
 }

@@ -73,7 +73,7 @@ class LessonViewController: UIViewController {
             card.layout()
         }
 
-        let pan = UIPanGestureRecognizer(target:self, action:"pan:")
+        let pan = UIPanGestureRecognizer(target:self, action:#selector(LessonViewController.pan(_:)))
         pan.maximumNumberOfTouches = 1
         pan.minimumNumberOfTouches = 1
         self.view.addGestureRecognizer(pan)
