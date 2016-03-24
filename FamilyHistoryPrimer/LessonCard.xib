@@ -66,7 +66,7 @@ U3VidGl0bGUREREREQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="xzJ-fT-9kd" secondAttribute="bottom" constant="10" id="A7N-Fa-C0d"/>
                 <constraint firstItem="xzJ-fT-9kd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="EvQ-hp-nJy"/>
