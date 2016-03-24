@@ -11,13 +11,15 @@ import UIKit
 
 class Lesson {
     var title: String
+    var subtitle: String?
     var color: UIColor
     var img: UIImage?
     var sections: [Section] = []
     
     init(lesson: JSON) {
-        self.title = lesson["title"].stringValue
         self.color = Color.fromHexString(lesson["color"].stringValue)
+        self.title = lesson["title"].stringValue
+        self.subtitle = lesson["subtitle"].string
         
         let imagePath = lesson["img"].string
         

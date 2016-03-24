@@ -11,6 +11,7 @@ import UIKit
 class LessonCardView: UIView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var lessonTitleLabel: UILabel!
+    @IBOutlet weak var lessonSubtitleLabel: UILabel!
     @IBOutlet weak var lessonImageView: UIImageView!
     @IBOutlet weak var sectionCountLabel: UILabel!
     
@@ -41,6 +42,7 @@ class LessonCardView: UIView {
 
     func layout() {
         lessonTitleLabel.text = lesson.title
+        lessonSubtitleLabel.text = lesson.subtitle
         lessonImageView.image = lesson.img
         xibView.backgroundColor = lesson.color
         if (lesson.sections.count == 1) {

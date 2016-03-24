@@ -1,5 +1,8 @@
 {
   "title": "Welcome!",
-  "subtitle": "Tap here to learn more about Family History: A Primer",
-  "lessons": []
+  "subtitle": "Tap here to learn about\nFamily History: A Primer",
+  "lessons": [
+    "navigation",
+    "feedback"
+  ]
 }

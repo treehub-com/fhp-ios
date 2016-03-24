@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="contentView" destination="xzJ-fT-9kd" id="HEh-C1-YAG"/>
                 <outlet property="lessonImageView" destination="SEq-Cy-0fV" id="c71-Ft-o2R"/>
+                <outlet property="lessonSubtitleLabel" destination="pAX-Ig-TjZ" id="e4k-Ic-9ve"/>
                 <outlet property="lessonTitleLabel" destination="zJC-YD-jIu" id="tbm-nQ-wch"/>
                 <outlet property="sectionCountLabel" destination="nWI-Ph-FWn" id="URe-e2-TZO"/>
             </connections>
@@ -24,7 +25,7 @@
                     <rect key="frame" x="10" y="10" width="280" height="380"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XZQ-dk-3Nv">
-                            <rect key="frame" x="8" y="20" width="264" height="213"/>
+                            <rect key="frame" x="8" y="20" width="264" height="329"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJC-YD-jIu">
                                     <rect key="frame" x="0.0" y="0.0" width="264" height="29"/>
@@ -39,6 +40,15 @@
                                         <constraint firstAttribute="width" secondItem="SEq-Cy-0fV" secondAttribute="height" multiplier="3:2" id="wdP-cH-h4e"/>
                                     </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAX-Ig-TjZ">
+                                    <rect key="frame" x="0.0" y="221" width="264" height="108"/>
+                                    <string key="text" base64-UTF8="YES">
+U3VidGl0bGUREREREQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ
+</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                         </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Section Count" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWI-Ph-FWn">
