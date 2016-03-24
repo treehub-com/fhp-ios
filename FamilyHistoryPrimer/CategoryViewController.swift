@@ -14,16 +14,20 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
 
     var categories: [Category] = []
+    var titleColor = Color.fromHexString("#000000", alpha: 0.73)
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
-        
+
         loadCategories()
-        
-        navItem.title = categories[0].title        
-        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+
+        navItem.title = categories[0].title
+
+        // Set navigation text color
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: titleColor]
+        self.navigationController?.navigationBar.tintColor = titleColor
     }
     
     // Set insets appropriately
