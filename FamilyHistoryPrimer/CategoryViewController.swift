@@ -18,9 +18,11 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        
         loadCategories()
         
-        navItem.title = categories[0].title
+        navItem.title = categories[0].title        
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
     }
     
