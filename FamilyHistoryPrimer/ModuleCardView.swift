@@ -26,25 +26,19 @@ class ModuleCardView: UIView {
         
         self.addSubview(xibView)
         
-        let cardMaskPath = UIBezierPath(roundedRect: xibView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 10.0, height: 10.0))
-        let cardMaskLayer = CAShapeLayer(layer: cardMaskPath)
-        cardMaskLayer.frame = xibView.bounds
-        cardMaskLayer.path = cardMaskPath.CGPath
-        xibView.layer.mask = cardMaskLayer
-
-        let contentMaskPath = UIBezierPath(roundedRect: contentView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 5.0, height: 5.0))
-        let contentMaskLayer = CAShapeLayer(layer: contentMaskPath)
-        contentMaskLayer.frame = contentView.bounds
-        contentMaskLayer.path = contentMaskPath.CGPath
-        contentView.layer.mask = contentMaskLayer
+        contentView.layer.shadowColor = UIColor.blackColor().CGColor
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 7)
+        contentView.layer.shadowOpacity = 0.37
+        contentView.layer.shadowRadius = 3
         
     }
     
     func layout() {
         moduleTitleLabel.text = module.title
+        moduleTitleLabel.textColor = module.color
         moduleSubtitleLabel.text = module.subtitle
+        moduleSubtitleLabel.textColor = module.color
         moduleImageView.image = module.img
-        xibView.backgroundColor = module.color
         switch module.lessons.count {
         case 0:
             lessonNumberLabel.text = ""
@@ -53,6 +47,7 @@ class ModuleCardView: UIView {
         default:
             lessonNumberLabel.text = String(module.lessons.count) + " lessons"
         }
+        lessonNumberLabel.textColor = module.color
     }
 
 }
