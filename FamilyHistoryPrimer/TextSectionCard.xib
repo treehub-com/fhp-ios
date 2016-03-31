@@ -10,7 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextSectionCardView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="eyy-pB-hGU" id="Vv2-Yc-DwP"/>
-                <outlet property="sectionContentLabel" destination="E0Y-hO-YBR" id="5dY-ov-XYf"/>
+                <outlet property="sectionContentView" destination="gxU-6c-i1U" id="T9X-kC-Oun"/>
                 <outlet property="sectionImageView" destination="77m-R9-wvf" id="sua-nG-2Rb"/>
             </connections>
         </placeholder>
@@ -22,8 +22,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyy-pB-hGU">
                     <rect key="frame" x="10" y="10" width="280" height="380"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BLw-Fv-wnN">
-                            <rect key="frame" x="8" y="8" width="264" height="368"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BLw-Fv-wnN">
+                            <rect key="frame" x="8" y="8" width="264" height="376"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="77m-R9-wvf">
                                     <rect key="frame" x="0.0" y="0.0" width="264" height="176"/>
@@ -32,12 +32,20 @@
                                         <constraint firstAttribute="width" constant="264" id="pYG-pi-EUZ"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Section Text Section Text Section Text Section Text Section Text Section Text Section" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0Y-hO-YBR">
-                                    <rect key="frame" x="0.0" y="184" width="264" height="184"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxU-6c-i1U">
+                                    <rect key="frame" x="0.0" y="176" width="264" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Text Section Text Section Text Section Text Section Text Section Text Section Text Section">
+                                            <attributes>
+                                                <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                </textView>
                             </subviews>
                         </stackView>
                     </subviews>
@@ -57,7 +65,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="586" y="401"/>
+            <point key="canvasLocation" x="690" y="549"/>
         </view>
     </objects>
 </document>

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -21,13 +22,14 @@
                                 <rect key="frame" x="172" y="172" width="256" height="256"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="DVL-TR-VCf"/>
+                                    <constraint firstAttribute="height" constant="256" id="cwp-vQ-ceK"/>
+                                    <constraint firstAttribute="width" secondItem="NoP-ed-ESf" secondAttribute="height" multiplier="1:1" id="nl9-W9-NNh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NoP-ed-ESf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Mcq-tw-Kjz"/>
-                            <constraint firstItem="NoP-ed-ESf" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="152" id="Nvv-tr-dLK"/>
                             <constraint firstItem="NoP-ed-ESf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hAA-1N-9Sj"/>
                         </constraints>
                     </view>

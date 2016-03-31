@@ -11,7 +11,7 @@ import UIKit
 class TextSectionCardView: SectionCardView {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var sectionImageView: UIImageView!
-    @IBOutlet weak var sectionContentLabel: UILabel!
+    @IBOutlet weak var sectionContentView: UITextView!
 
     var section: TextSection!
     
@@ -55,7 +55,7 @@ class TextSectionCardView: SectionCardView {
 
     override func layout() {
         sectionImageView.image = section.img
-        sectionContentLabel.text = section.content
+        sectionContentView.text = section.content
     }
     
 }
