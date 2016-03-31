@@ -71,6 +71,18 @@ class YesNoSectionCardView: SectionCardView {
         contentView.layer.mask = contentMaskLayer
         
         contentView.backgroundColor = UIColor(patternImage: UIImage(named: "cardFront.png")!)
+        
+        let yesMaskPath = UIBezierPath(roundedRect: yesView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 3.0, height: 3.0))
+        let yesMaskLayer = CAShapeLayer(layer: yesMaskPath)
+        yesMaskLayer.frame = yesView.bounds
+        yesMaskLayer.path = yesMaskPath.CGPath
+        yesView.layer.mask = yesMaskLayer
+        
+        let noMaskPath = UIBezierPath(roundedRect: noView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 3.0, height: 3.0))
+        let noMaskLayer = CAShapeLayer(layer: noMaskPath)
+        noMaskLayer.frame = noView.bounds
+        noMaskLayer.path = noMaskPath.CGPath
+        noView.layer.mask = noMaskLayer
     }
     
     override func layout() {
