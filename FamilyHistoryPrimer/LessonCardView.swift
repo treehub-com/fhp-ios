@@ -31,6 +31,7 @@ class LessonCardView: UIView {
         contentView.layer.shadowOpacity = 0.37
         contentView.layer.shadowRadius = 3
         
+        contentView.backgroundColor = UIColor(patternImage: UIImage(named: "plaqueFront.png")!)
     }
 
     func layout() {
