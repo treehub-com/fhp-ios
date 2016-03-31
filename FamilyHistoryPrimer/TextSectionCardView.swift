@@ -26,6 +26,11 @@ class TextSectionCardView: SectionCardView {
     }
     
     func didLoad() {
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 5)
+        self.layer.shadowOpacity = 0.37
+        self.layer.shadowRadius = 2
+        
         let xibView = NSBundle.mainBundle().loadNibNamed("TextSectionCard", owner: self, options: nil)[0] as! UIView
         xibView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: self.frame.size)
         xibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
@@ -43,6 +48,9 @@ class TextSectionCardView: SectionCardView {
         contentMaskLayer.frame = contentView.bounds
         contentMaskLayer.path = contentMaskPath.CGPath
         contentView.layer.mask = contentMaskLayer
+        
+        // Background pattern from http://subtlepatterns.com/?s=brilliant
+        contentView.backgroundColor = UIColor(patternImage: UIImage(named: "cardFront.png")!)
     }
 
     override func layout() {

@@ -32,6 +32,8 @@ class LessonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
+        
         navItem.title = lesson.title
         
         // If there are no sections don't bother doing anything

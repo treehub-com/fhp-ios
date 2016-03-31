@@ -23,13 +23,13 @@ class YesNoSectionCardView: SectionCardView {
     let questionFontSize: CGFloat = 24.0
     let questionColor = Color.fromHexString("#008040")
     let correctLabelColor = Color.fromHexString("#000000")
-    let correctBackgroundColor = Color.fromHexString("#008040")
+    let correctBackgroundColor = Color.fromHexString("#008040", alpha: 0.73)
     let incorrectLabelColor = Color.fromHexString("#000000")
-    let incorrectBackgroundColor = Color.fromHexString("#FF0000")
+    let incorrectBackgroundColor = Color.fromHexString("#FF0000", alpha: 0.73)
     let activeLabelColor = Color.fromHexString("#000000")
-    let activeBackgroundColor = Color.fromHexString("#CCCCCC")
+    let activeBackgroundColor = Color.fromHexString("#CCCCCC", alpha: 0.73)
     let inactiveLabelColor = Color.fromHexString("#CCCCCC")
-    let inactiveBackgroundColor = Color.fromHexString("#FFFFFF")
+    let inactiveBackgroundColor = UIColor.clearColor()
     
     var currentQuestion: Int = 0
     var initialPoint: CGPoint!
@@ -46,6 +46,11 @@ class YesNoSectionCardView: SectionCardView {
     }
     
     func didLoad() {
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 5)
+        self.layer.shadowOpacity = 0.37
+        self.layer.shadowRadius = 2
+        
         let xibView = NSBundle.mainBundle().loadNibNamed("YesNoSectionCard", owner: self, options: nil)[0] as! UIView
         xibView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: self.frame.size)
         xibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
@@ -63,6 +68,8 @@ class YesNoSectionCardView: SectionCardView {
         contentMaskLayer.frame = contentView.bounds
         contentMaskLayer.path = contentMaskPath.CGPath
         contentView.layer.mask = contentMaskLayer
+        
+        contentView.backgroundColor = UIColor(patternImage: UIImage(named: "cardFront.png")!)
     }
     
     override func layout() {
