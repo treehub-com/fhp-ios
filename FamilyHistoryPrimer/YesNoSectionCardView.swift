@@ -19,6 +19,7 @@ class YesNoSectionCardView: SectionCardView {
 
     var section: YesNoSection!
     var questions: [UIView] = [];
+    var completeLabel: UIView!
     
     let questionFontSize: CGFloat = 24.0
     let questionColor = Color.fromHexString("#008040")
@@ -84,6 +85,8 @@ class YesNoSectionCardView: SectionCardView {
             label.font = UIFont.systemFontOfSize(questionFontSize)
             label.textAlignment = .Center
             label.textColor = questionColor
+            label.lineBreakMode = .ByWordWrapping
+            label.numberOfLines = 3
             
             let view = UIView(frame: CGRectMake(0, topOffset, 264, questionHeight))
             view.addSubview(label)
@@ -101,16 +104,16 @@ class YesNoSectionCardView: SectionCardView {
         }
         
         // Add all done text
-//        let label = UILabel(frame: CGRectMake(0, 0, 132, 64))
-//        label.text = "Complete"
-//        label.font = UIFont.systemFontOfSize(questionFontSize)
-//        label.textAlignment = .Center
-//        label.textColor = inactiveLabelColor
-//        
-//        let view = UIView(frame: CGRectMake(66, topOffset, 132, 64))
-//        view.addSubview(label)
-//        
-//        questions.append(view)
+        let label = UILabel(frame: CGRectMake(0, 0, 264, questionHeight))
+        label.text = "Complete"
+        label.font = UIFont.systemFontOfSize(questionFontSize)
+        label.textAlignment = .Center
+        label.textColor = inactiveLabelColor
+        label.lineBreakMode = .ByWordWrapping
+        label.numberOfLines = 3
+        
+        completeLabel = UIView(frame: CGRectMake(0, topOffset, 264, questionHeight))
+        completeLabel.addSubview(label)
     }
     
     func pan(rec:UIPanGestureRecognizer) {
@@ -212,7 +215,9 @@ class YesNoSectionCardView: SectionCardView {
             self.questions[self.currentQuestion].alpha = 0
             self.questionsView.addSubview(self.questions[self.currentQuestion])
         } else {
-            // TODO: Complete
+            //Complete
+            completeLabel.alpha = 0
+            questionsView.addSubview(completeLabel)
         }
         // Transition to correct background, fade out old question, fade in new question
         if answer == "yes" {
@@ -249,6 +254,11 @@ class YesNoSectionCardView: SectionCardView {
                     animations: {
                         if self.currentQuestion < self.questions.count {
                             self.questions[self.currentQuestion].alpha = 1
+                        } else {
+                            // Complete
+                            self.completeLabel.alpha = 1
+                            self.yesView.alpha = 0
+                            self.noView.alpha = 0
                         }
                         if answer == "yes" {
                             self.yesView.backgroundColor = self.inactiveBackgroundColor
