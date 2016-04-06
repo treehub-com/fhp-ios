@@ -15,7 +15,10 @@ class CompleteCardView: SectionCardView {
         "Good Show!",
         "Good Job",
         "Excellent Work",
-        "Nice \\o/"
+        "Nice \\o/",
+        "Well done",
+        "Finished :)",
+        "Bravo",
     ]
     
     override init(frame: CGRect) {
