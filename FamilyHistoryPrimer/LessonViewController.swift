@@ -19,7 +19,7 @@ class LessonViewController: UIViewController {
     let xScale: CGFloat = 0.007
     let cardSpacing: CGFloat = 13.0
     var readOffset: CGFloat = -380
-    var unreadOffset: CGFloat = 100
+    var cardOffset: CGFloat = 100
     
     // Pan Variables
     var readIndex = -1
@@ -39,10 +39,10 @@ class LessonViewController: UIViewController {
             return
         }
 
-        unreadOffset = (self.view.frame.height - contentView.frame.origin.y - 400) * 0.5
+        cardOffset = (self.view.frame.height - contentView.frame.origin.y - 400) * 0.5
         
         for (i, section) in lesson.sections.enumerate() {
-            let frame = CGRect(x: 0.0, y: CGFloat(i)*cardSpacing + unreadOffset, width: 300.0, height: 400.0)
+            let frame = CGRect(x: 0.0, y: CGFloat(i)*cardSpacing + cardOffset, width: 300.0, height: 400.0)
             let transform = CGAffineTransformMakeScale(1 - (xScale * CGFloat(i)), 1)
             switch(section.type) {
             case "text":
@@ -67,6 +67,9 @@ class LessonViewController: UIViewController {
             }
             
         }
+        
+        let frame = CGRect(x: 0.0, y: cardOffset, width: 300.0, height: 400.0)
+        contentView.addSubview(CompleteCardView(frame: frame))
         
         for card in cards.reverse() {
             contentView.addSubview(card)
@@ -165,7 +168,7 @@ class LessonViewController: UIViewController {
                     readIndex -= 1
                     
                     var newOrigin = readInitialOrigin
-                    newOrigin.y = unreadOffset
+                    newOrigin.y = cardOffset
                     let shiftOffset = unreadIndex + 1 // don't move the new top unread card
                     
                     UIView.animateWithDuration(0.37, animations: {

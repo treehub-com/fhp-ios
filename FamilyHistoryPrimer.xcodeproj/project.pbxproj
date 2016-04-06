@@ -47,6 +47,8 @@
 		52A468351CB5580200097E82 /* PlaqueBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A468341CB5580200097E82 /* PlaqueBackgroundView.swift */; };
 		52A468371CB55A1C00097E82 /* CardBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A468361CB55A1C00097E82 /* CardBackgroundView.swift */; };
 		52A468391CB55E6B00097E82 /* AppBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A468381CB55E6B00097E82 /* AppBackgroundView.swift */; };
+		52A4683B1CB564C400097E82 /* CompleteCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A4683A1CB564C400097E82 /* CompleteCard.xib */; };
+		52A4683D1CB5653700097E82 /* CompleteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A4683C1CB5653700097E82 /* CompleteCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		52A468341CB5580200097E82 /* PlaqueBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaqueBackgroundView.swift; sourceTree = "<group>"; };
 		52A468361CB55A1C00097E82 /* CardBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBackgroundView.swift; sourceTree = "<group>"; };
 		52A468381CB55E6B00097E82 /* AppBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBackgroundView.swift; sourceTree = "<group>"; };
+		52A4683A1CB564C400097E82 /* CompleteCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompleteCard.xib; sourceTree = "<group>"; };
+		52A4683C1CB5653700097E82 /* CompleteCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,8 @@
 				52258B481C90DE05008E04F5 /* YesNoSectionCard.xib */,
 				52258B4E1C90DF43008E04F5 /* ChallengeSectionCardView.swift */,
 				52258B4A1C90DE87008E04F5 /* ChallengeSectionCard.xib */,
+				52A4683C1CB5653700097E82 /* CompleteCardView.swift */,
+				52A4683A1CB564C400097E82 /* CompleteCard.xib */,
 			);
 			name = Cards;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A4683B1CB564C400097E82 /* CompleteCard.xib in Resources */,
 				5214712A1C99C0E600D31542 /* images in Resources */,
 				5247F5101C88E8ED00A27649 /* learn.json in Resources */,
 				52258B451C90D5DB008E04F5 /* TextSectionCard.xib in Resources */,
@@ -393,6 +400,7 @@
 				52A468351CB5580200097E82 /* PlaqueBackgroundView.swift in Sources */,
 				5247F5091C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift in Sources */,
 				52258B381C908D41008E04F5 /* LessonCell.swift in Sources */,
+				52A4683D1CB5653700097E82 /* CompleteCardView.swift in Sources */,
 				52A468371CB55A1C00097E82 /* CardBackgroundView.swift in Sources */,
 				5247F5121C88EA1400A27649 /* Module.swift in Sources */,
 				52258B4F1C90DF43008E04F5 /* ChallengeSectionCardView.swift in Sources */,
