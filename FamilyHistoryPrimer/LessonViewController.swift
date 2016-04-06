@@ -58,10 +58,12 @@ class LessonViewController: UIViewController {
                 cards.append(card)
                 break
             case "challenge":
-                let card = ChallengeSectionCardView(frame: frame)
-                card.section = section as! ChallengeSection
-                card.transform = transform
-                cards.append(card)
+                break
+                // TODO put these in when we store the challenges
+//                let card = ChallengeSectionCardView(frame: frame)
+//                card.section = section as! ChallengeSection
+//                card.transform = transform
+//                cards.append(card)
             default:
                 break
             }
