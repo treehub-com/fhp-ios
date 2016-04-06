@@ -92,7 +92,10 @@ extension CategoryViewController: UICollectionViewDataSource {
         insets.bottom = value - 30
         cell.moduleCollectionView.contentInset = insets
         
-        // TODO set the offset of each row
+        // Set the offset of each row
+        cell.moduleCollectionView.contentOffset.y = cell.category.offset
+        // Trigger a data reload
+        cell.moduleCollectionView.reloadData()
         
         return cell
         

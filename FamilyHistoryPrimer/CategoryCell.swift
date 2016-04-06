@@ -35,3 +35,12 @@ extension CategoryCell : UICollectionViewDataSource {
     }
     
 }
+
+extension CategoryCell: UIScrollViewDelegate {
+    
+    // Store the current module offset so we can restore on cell reuse
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        category.offset = moduleCollectionView.contentOffset.y
+    }
+    
+}

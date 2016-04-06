@@ -14,6 +14,7 @@ class Category {
     var title: String
     var color: UIColor
     var modules: [Module] = []
+    var offset: CGFloat = -30
     
     init(category: JSON) {
         self.title = category["title"].stringValue
