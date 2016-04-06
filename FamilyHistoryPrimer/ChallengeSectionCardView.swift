@@ -48,8 +48,6 @@ class ChallengeSectionCardView: SectionCardView {
         contentMaskLayer.frame = contentView.bounds
         contentMaskLayer.path = contentMaskPath.CGPath
         contentView.layer.mask = contentMaskLayer
-        
-        contentView.backgroundColor = UIColor(patternImage: UIImage(named: "cardFront.png")!)
     }
 
 }

@@ -72,8 +72,6 @@ class YesNoSectionCardView: SectionCardView {
         contentMaskLayer.path = contentMaskPath.CGPath
         contentView.layer.mask = contentMaskLayer
         
-        contentView.backgroundColor = UIColor(patternImage: UIImage(named: "cardFront.png")!)
-        
         let yesMaskPath = UIBezierPath(roundedRect: yesView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 3.0, height: 3.0))
         let yesMaskLayer = CAShapeLayer(layer: yesMaskPath)
         yesMaskLayer.frame = yesView.bounds

@@ -50,9 +50,6 @@ class TextSectionCardView: SectionCardView {
         contentMaskLayer.frame = contentView.bounds
         contentMaskLayer.path = contentMaskPath.CGPath
         contentView.layer.mask = contentMaskLayer
-        
-        // Background pattern from http://subtlepatterns.com/?s=brilliant
-        contentView.backgroundColor = UIColor(patternImage: UIImage(named: "cardFront.png")!)
     }
 
     override func layout() {

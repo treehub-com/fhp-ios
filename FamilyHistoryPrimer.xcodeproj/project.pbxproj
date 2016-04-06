@@ -44,6 +44,8 @@
 		5247F5161C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5151C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift */; };
 		5247F5191C8905F300A27649 /* ModuleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5247F5181C8905F300A27649 /* ModuleCardView.swift */; };
 		5247F51B1C8906F000A27649 /* ModuleCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5247F51A1C8906F000A27649 /* ModuleCard.xib */; };
+		52A468351CB5580200097E82 /* PlaqueBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A468341CB5580200097E82 /* PlaqueBackgroundView.swift */; };
+		52A468371CB55A1C00097E82 /* CardBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A468361CB55A1C00097E82 /* CardBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		5247F5151C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalUICollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		5247F5181C8905F300A27649 /* ModuleCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleCardView.swift; sourceTree = "<group>"; };
 		5247F51A1C8906F000A27649 /* ModuleCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModuleCard.xib; sourceTree = "<group>"; };
+		52A468341CB5580200097E82 /* PlaqueBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaqueBackgroundView.swift; sourceTree = "<group>"; };
+		52A468361CB55A1C00097E82 /* CardBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +220,8 @@
 				5247F5151C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift */,
 				5221E75F1C91D25F004CF9F6 /* Color.swift */,
 				5221E7611C91E0B0004CF9F6 /* Direction.swift */,
+				52A468341CB5580200097E82 /* PlaqueBackgroundView.swift */,
+				52A468361CB55A1C00097E82 /* CardBackgroundView.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -380,8 +386,10 @@
 				5247F4E41C88AA6C00A27649 /* AppDelegate.swift in Sources */,
 				5247F5191C8905F300A27649 /* ModuleCardView.swift in Sources */,
 				52258B2F1C907C45008E04F5 /* Lesson.swift in Sources */,
+				52A468351CB5580200097E82 /* PlaqueBackgroundView.swift in Sources */,
 				5247F5091C88B93100A27649 /* VerticalUICollectionViewFlowLayout.swift in Sources */,
 				52258B381C908D41008E04F5 /* LessonCell.swift in Sources */,
+				52A468371CB55A1C00097E82 /* CardBackgroundView.swift in Sources */,
 				5247F5121C88EA1400A27649 /* Module.swift in Sources */,
 				52258B4F1C90DF43008E04F5 /* ChallengeSectionCardView.swift in Sources */,
 				52258B3C1C909DBE008E04F5 /* TextSection.swift in Sources */,
