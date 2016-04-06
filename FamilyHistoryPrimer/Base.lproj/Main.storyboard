@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="CcW-az-Hjd"/>
                         <viewControllerLayoutGuide type="bottom" id="P3X-n6-tIv"/>
                     </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="1LE-tk-rKx">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="1LE-tk-rKx" customClass="AppBackgroundView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -124,7 +124,7 @@
                         <viewControllerLayoutGuide type="top" id="1xR-UJ-SOk"/>
                         <viewControllerLayoutGuide type="bottom" id="JpJ-gU-8W9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I1S-Nc-ths">
+                    <view key="view" contentMode="scaleToFill" id="I1S-Nc-ths" customClass="AppBackgroundView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -192,7 +192,7 @@
                         <viewControllerLayoutGuide type="top" id="YiG-F5-R2Q"/>
                         <viewControllerLayoutGuide type="bottom" id="9og-zR-54h"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="E5o-Sj-lJr">
+                    <view key="view" contentMode="scaleToFill" id="E5o-Sj-lJr" customClass="AppBackgroundView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

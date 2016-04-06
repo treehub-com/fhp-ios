@@ -19,9 +19,6 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Background pattern from http://subtlepatterns.com/cheap-diagonal-fabric/
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.png")!)
-
         loadCategories()
 
         navItem.title = categories[0].title

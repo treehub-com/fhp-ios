@@ -46,6 +46,7 @@
 		5247F51B1C8906F000A27649 /* ModuleCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5247F51A1C8906F000A27649 /* ModuleCard.xib */; };
 		52A468351CB5580200097E82 /* PlaqueBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A468341CB5580200097E82 /* PlaqueBackgroundView.swift */; };
 		52A468371CB55A1C00097E82 /* CardBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A468361CB55A1C00097E82 /* CardBackgroundView.swift */; };
+		52A468391CB55E6B00097E82 /* AppBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A468381CB55E6B00097E82 /* AppBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		5247F51A1C8906F000A27649 /* ModuleCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModuleCard.xib; sourceTree = "<group>"; };
 		52A468341CB5580200097E82 /* PlaqueBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaqueBackgroundView.swift; sourceTree = "<group>"; };
 		52A468361CB55A1C00097E82 /* CardBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBackgroundView.swift; sourceTree = "<group>"; };
+		52A468381CB55E6B00097E82 /* AppBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				5221E7611C91E0B0004CF9F6 /* Direction.swift */,
 				52A468341CB5580200097E82 /* PlaqueBackgroundView.swift */,
 				52A468361CB55A1C00097E82 /* CardBackgroundView.swift */,
+				52A468381CB55E6B00097E82 /* AppBackgroundView.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				52258B471C90D600008E04F5 /* TextSectionCardView.swift in Sources */,
 				52258B3A1C909D7C008E04F5 /* Section.swift in Sources */,
 				5247F5161C88F3CF00A27649 /* HorizontalUICollectionViewFlowLayout.swift in Sources */,
+				52A468391CB55E6B00097E82 /* AppBackgroundView.swift in Sources */,
 				52258B361C908C0A008E04F5 /* LessonCardView.swift in Sources */,
 				52258B4D1C90DF29008E04F5 /* YesNoSectionCardView.swift in Sources */,
 				5221E7621C91E0B0004CF9F6 /* Direction.swift in Sources */,
