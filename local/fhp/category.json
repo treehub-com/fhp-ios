@@ -1,7 +1,6 @@
 {
   "title": "Family History: A Primer",
   "modules": [
-    "welcome",
-    "stats"
+    "welcome"
   ]
 }

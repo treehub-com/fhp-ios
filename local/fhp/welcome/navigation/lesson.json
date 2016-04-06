@@ -1,13 +1,52 @@
 {
   "title": "Navigation",
-  "subtitle": "Tap to learn about nagivating Family History: A Primer",
+  "subtitle": "Finding your way around\nFamily History: A Primer",
   "sections": [
-    "intro",
-    "swipe-down",
-    "activity-types",
-    "yes-no-intro",
-    "yes-no",
-    "challenge-intro",
-    "challenge"
+    {
+      "type": "text",
+      "content": "This is a lesson, presented as a stack of cards. You can swipe up to move forward."
+    },
+    {
+      "type": "text",
+      "content": "To go back you can swipe down. Go ahead, we'll still be here when you get back."
+    },
+    {
+      "type": "text",
+      "content": "Well done!\n\nFamily History: A Primer is designed to teach you Family History a few minutes at a time."
+    },
+    {
+      "type": "text",
+      "content": "Each lesson may have multiple types of cards."
+    },
+    {
+      "type": "text",
+      "content": "On the next card you drag the question to either yes or no to answer each question. Go ahead and give it a go."
+    },
+    {
+      "type": "yes-no",
+      "task": "Is this statement true?",
+      "questions": [
+        {
+          "question": "I live on planet earth",
+          "answer": "yes"
+        },
+        {
+          "question": "Genghis Khan is still alive",
+          "answer": "no"
+        },
+        {
+          "question": "I can learn family history",
+          "answer": "yes"
+        },
+        {
+          "question": "I understand how this works now",
+          "answer": "yes"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "content": "Great! Looks like you're ready to go."
+    }
   ]
 }

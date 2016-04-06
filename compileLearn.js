@@ -59,8 +59,7 @@ for (var dir of ['local', 'learn']) {
 
         // Sections
         for (var sectionIdx in lesson.sections) {
-          var sectionPath = lesson.sections[sectionIdx];
-          var section = require('./' + dir + '/' + categoryPath + '/' + modulePath + '/' + lessonPath + '/section/' + sectionPath + '.json');
+          var section = lesson.sections[sectionIdx];
 
           // Copy Image if it exists
           try {

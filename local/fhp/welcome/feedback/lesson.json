@@ -2,9 +2,21 @@
   "title": "Feedback",
   "subtitle": "See something we didn't? Want to get involved? Tap to find out how.",
   "sections": [
-    "thank-you",
-    "guidelines",
-    "email",
-    "github"
+    {
+      "type": "text",
+      "content": "So you want to give us some feedback. Thank You! Flip through to find out how."
+    },
+    {
+      "type": "text",
+      "content": "Please:\nBe specific\nBe nice\nBe happy"
+    },
+    {
+      "type": "text",
+      "content": "The best way to contact us is to send us an email at fhp@treehub.com"
+    },
+    {
+      "type": "text",
+      "content": "Or you can contribute to the project at github.com/trepo-tools/learn"
+    }
   ]
 }
