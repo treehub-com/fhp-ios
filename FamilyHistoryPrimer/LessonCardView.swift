@@ -26,10 +26,12 @@ class LessonCardView: UIView {
         
         self.addSubview(xibView)
 
+        contentView.layer.shadowPath = UIBezierPath(rect: contentView.bounds).CGPath
         contentView.layer.shadowColor = UIColor.blackColor().CGColor
         contentView.layer.shadowOffset = CGSize(width: 0, height: 7)
         contentView.layer.shadowOpacity = 0.37
         contentView.layer.shadowRadius = 3
+        contentView.layer.shouldRasterize = true
         
         contentView.backgroundColor = UIColor(patternImage: UIImage(named: "plaqueFront.png")!)
     }

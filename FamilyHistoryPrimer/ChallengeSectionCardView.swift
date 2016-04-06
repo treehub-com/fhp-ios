@@ -24,11 +24,6 @@ class ChallengeSectionCardView: SectionCardView {
     }
     
     func didLoad() {
-        self.layer.shadowColor = UIColor.blackColor().CGColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 5)
-        self.layer.shadowOpacity = 0.37
-        self.layer.shadowRadius = 2
-        
         let xibView = NSBundle.mainBundle().loadNibNamed("ChallengeSectionCard", owner: self, options: nil)[0] as! UIView
         xibView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: self.frame.size)
         xibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
@@ -40,6 +35,13 @@ class ChallengeSectionCardView: SectionCardView {
         cardMaskLayer.frame = xibView.bounds
         cardMaskLayer.path = cardMaskPath.CGPath
         xibView.layer.mask = cardMaskLayer
+        
+        self.layer.shadowPath = cardMaskPath.CGPath
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 5)
+        self.layer.shadowOpacity = 0.37
+        self.layer.shadowRadius = 2
+        self.layer.shouldRasterize = true
         
         let contentMaskPath = UIBezierPath(roundedRect: contentView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 5.0, height: 5.0))
         let contentMaskLayer = CAShapeLayer(layer: contentMaskPath)
