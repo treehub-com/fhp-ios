@@ -40,7 +40,11 @@ class ModuleCardView: UIView {
         moduleSubtitleLabel.text = module.subtitle
         moduleSubtitleLabel.textColor = module.color
         moduleImageView.image = module.img
-        lessonNumberLabel.text = "0/" + String(module.lessons.count)
+        if (module.lessons.count == 1) {
+            lessonNumberLabel.text = String(module.lessons.count) + " lesson"
+        } else {
+            lessonNumberLabel.text = String(module.lessons.count) + " lessons"
+        }
         lessonNumberLabel.textColor = module.color
     }
 
