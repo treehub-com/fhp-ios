@@ -31,7 +31,6 @@ class ModuleCardView: UIView {
         contentView.layer.shadowOffset = CGSize(width: 0, height: 7)
         contentView.layer.shadowOpacity = 0.37
         contentView.layer.shadowRadius = 3
-        contentView.layer.shouldRasterize = true
     }
     
     func layout() {

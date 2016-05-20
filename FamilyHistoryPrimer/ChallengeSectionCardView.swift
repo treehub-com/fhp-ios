@@ -41,7 +41,6 @@ class ChallengeSectionCardView: SectionCardView {
         self.layer.shadowOffset = CGSize(width: 0, height: 5)
         self.layer.shadowOpacity = 0.37
         self.layer.shadowRadius = 2
-        self.layer.shouldRasterize = true
         
         let contentMaskPath = UIBezierPath(roundedRect: contentView.bounds,byRoundingCorners: .AllCorners, cornerRadii: CGSize(width: 5.0, height: 5.0))
         let contentMaskLayer = CAShapeLayer(layer: contentMaskPath)
