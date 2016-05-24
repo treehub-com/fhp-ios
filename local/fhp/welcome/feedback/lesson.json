@@ -4,19 +4,23 @@
   "sections": [
     {
       "type": "text",
-      "content": "So you want to give us some feedback. Thank You! Flip through to find out how."
+      "content": "So you want to give us some feedback. Thank You! Flip through to find out how.",
+      "image": "thank-you.png"
     },
     {
       "type": "text",
-      "content": "Please:\nBe specific\nBe nice\nBe happy"
+      "content": "Please:\nBe specific\nBe nice\nBe happy",
+      "image": "smiley.png"
     },
     {
       "type": "text",
-      "content": "The best way to contact us is to send an email to fhp@treehub.com"
+      "content": "The best way to contact us is to send an email to fhp@treehub.com",
+      "image": "email.png"
     },
     {
       "type": "text",
-      "content": "Or you can contribute to the project directly at github.com/trepo-tools/learn"
+      "content": "Or you can contribute to the project directly at github.com/trepo-tools/learn",
+      "image": "puzzle.png"
     }
   ]
 }
