@@ -304,6 +304,7 @@
 				TargetAttributes = {
 					5247F4DF1C88AA6C00A27649 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 496JL3CVJ7;
 					};
 					5247F4F31C88AA6C00A27649 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -537,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -553,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
