@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="CcW-az-Hjd"/>
                         <viewControllerLayoutGuide type="bottom" id="P3X-n6-tIv"/>
                     </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="1LE-tk-rKx" customClass="AppBackgroundView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="1LE-tk-rKx" customClass="AppBackgroundView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -82,8 +82,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Au9-yu-fxe" secondAttribute="trailing" id="8mR-qL-cnO"/>
-                                            <constraint firstAttribute="bottom" secondItem="Au9-yu-fxe" secondAttribute="bottom" id="AcW-5Y-7DF"/>
                                             <constraint firstItem="Au9-yu-fxe" firstAttribute="leading" secondItem="JiK-CG-M0e" secondAttribute="leading" id="Laa-Xw-cLv"/>
+                                            <constraint firstAttribute="bottom" secondItem="Au9-yu-fxe" secondAttribute="bottom" id="Uf5-da-isT"/>
                                             <constraint firstItem="Au9-yu-fxe" firstAttribute="top" secondItem="JiK-CG-M0e" secondAttribute="top" id="xKU-5p-NPh"/>
                                         </constraints>
                                         <connections>
