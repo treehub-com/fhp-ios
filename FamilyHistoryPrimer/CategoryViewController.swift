@@ -28,6 +28,12 @@ class CategoryViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = titleColor
     }
     
+    // Invalidate any existing layout so we calculate new item sizes on device rotation (looking at you iPad)
+    override func viewWillLayoutSubviews() {
+        categoryCollectionView.collectionViewLayout.invalidateLayout()
+        super.viewDidLayoutSubviews()
+    }
+    
     // Set insets appropriately
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
