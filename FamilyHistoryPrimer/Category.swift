@@ -15,7 +15,7 @@ class Category {
     var color: UIColor
     var modules: [Module] = []
     // Store our y offset so we can set our offsets properly on reuse
-    var offset: CGFloat = -30 // Must match top offset in CategoryViewController
+    var offset: CGFloat = -16 // Must match top offset in CategoryViewController
     
     init(category: JSON) {
         self.title = category["title"].stringValue

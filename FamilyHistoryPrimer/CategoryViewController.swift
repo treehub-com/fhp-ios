@@ -88,8 +88,8 @@ extension CategoryViewController: UICollectionViewDataSource {
         // Set moduleCollectionView top and bottom insets
         var insets = cell.moduleCollectionView.contentInset
         let value = (self.categoryCollectionView.frame.height - (cell.moduleCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height)
-        insets.top = 30
-        insets.bottom = value - 30
+        insets.top = 16
+        insets.bottom = value - 16
         cell.moduleCollectionView.contentInset = insets
         
         // Set the offset of each row

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,45 +18,45 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+            <rect key="frame" x="0.0" y="0.0" width="280" height="380"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkQ-vF-GtP" customClass="PlaqueBackgroundView" customModule="FamilyHistoryPrimer" customModuleProvider="target">
-                    <rect key="frame" x="10" y="10" width="280" height="380"/>
+                    <rect key="frame" x="10" y="10" width="260" height="360"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pr5-H5-wMF">
-                            <rect key="frame" x="8" y="16" width="264" height="213"/>
+                            <rect key="frame" x="8" y="16" width="244" height="200"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Module Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wp-F0-25y">
-                                    <rect key="frame" x="0.0" y="0.0" width="264" height="29"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="244" height="29"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2No-6q-aZc">
-                                    <rect key="frame" x="0.0" y="37" width="264" height="176"/>
+                                    <rect key="frame" x="0.0" y="37" width="244" height="163"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="2No-6q-aZc" secondAttribute="height" multiplier="3:2" id="FX7-tR-kEX"/>
-                                        <constraint firstAttribute="width" constant="264" id="k6B-0r-Tey"/>
+                                        <constraint firstAttribute="width" constant="244" id="k6B-0r-Tey"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
                         </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson Count" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-eS-22w">
-                            <rect key="frame" x="140" y="352" width="132" height="20"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="132" id="Jcf-Y1-vHI"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5J-UN-GdK">
-                            <rect key="frame" x="8" y="237" width="264" height="116"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5J-UN-GdK">
+                            <rect key="frame" x="8" y="237" width="244" height="96"/>
                             <string key="text" base64-UTF8="YES">
 U3VidGl0bGUREREREQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ
 </string>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson Count" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE7-eS-22w">
+                            <rect key="frame" x="120" y="332" width="132" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="132" id="Jcf-Y1-vHI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -79,7 +79,7 @@ U3VidGl0bGUREREREQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ1TdWJ0aXRsZQ
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="312" y="408"/>
+            <point key="canvasLocation" x="470" y="568"/>
         </view>
     </objects>
 </document>

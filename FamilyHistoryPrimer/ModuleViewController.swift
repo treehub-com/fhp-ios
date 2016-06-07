@@ -27,8 +27,8 @@ class ModuleViewController: UIViewController {
         // Set categoryCollectionView top and bottom insets
         var insets = self.lessonCollectionView.contentInset
         let topValue = (self.lessonCollectionView.frame.height - (self.lessonCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.height)
-        insets.top = 30
-        insets.bottom = topValue - 30
+        insets.top = 16
+        insets.bottom = topValue - 16
         let sideValue = (self.lessonCollectionView.frame.width - (self.lessonCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
         insets.left = sideValue
         insets.right = sideValue
