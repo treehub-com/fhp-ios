@@ -18,7 +18,7 @@ class LessonViewController: UIViewController {
     // Placement Variables
     let xScale: CGFloat = 0.007
     let cardSpacing: CGFloat = 13.0
-    var readOffset: CGFloat = -380
+    var readOffset: CGFloat = -400
     var cardOffset: CGFloat = 100
     
     // Pan Variables
